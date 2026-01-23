@@ -404,6 +404,10 @@ function initMenu() {
     closeMenu.addEventListener("click", closeMenuFunc);
   }
 
+  if (menuOverlay) {
+    menuOverlay.addEventListener("click", closeMenuFunc);
+  }
+
   menuOverlay.addEventListener("click", closeMenuFunc);
 
   document.addEventListener("keydown", function (event) {
@@ -532,24 +536,6 @@ function highlightCurrentPage() {
   console.log("✓ Current page highlighted");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function loadMusicPlayer() {
   try {
     
@@ -602,3 +588,4 @@ function loadScript(src) {
     document.head.appendChild(script);
   });
 }
+
