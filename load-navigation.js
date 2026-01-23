@@ -398,6 +398,9 @@ function initMenu() {
     if (e && e.target.closest(".dropdown-content")) {
       return;
     }
+    menuPanel.classList.remove("active");
+    if (menuOverlay) menuOverlay.classList.remove("active");
+    document.body.style.overflow = ""; // Re-enable scrolling
   }
 
   if (closeMenu) {
