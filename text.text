@@ -1,0 +1,11 @@
+cd "D:\Projects (ongoing)\Space Educational Portal"
+
+node -v
+
+node tools/remove-comments.js --dry-run
+
+node tools/remove-comments.js
+
+Get-ChildItem -Recurse -Filter .bak | ForEach-Object {
+$orig = $.FullName -replace '\.bak$',''; Copy-Item $.FullName $orig -Force
+}

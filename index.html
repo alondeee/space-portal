@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Solar System | Space Educational Portal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Icon/earth.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="section1" class="content-section">
+        <div class="section-header">
+          <h1><i class="fas fa-sun"></i> Interactive Solar System</h1>
+          <p class="subtitle">Explore our cosmic neighborhood in 3D</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="model-container">
+          <div id="loading-screen">
+            <div class="spinner"></div>
+            <p>Loading solar system...</p>
+          </div>
+          <canvas id="solar-system-canvas"></canvas>
+
+          <div class="hint">
+            <i class="fas fa-mouse-pointer"></i> Click and drag to rotate •
+            Scroll to zoom
+          </div>
+        </div>
+
+        <div class="planet-selector">
+          <h3>Select a Planet to Focus:</h3>
+          <div class="planet-buttons">
+            <button class="planet-btn" data-planet="sun">Sun</button>
+            <button class="planet-btn" data-planet="mercury">Mercury</button>
+            <button class="planet-btn" data-planet="venus">Venus</button>
+            <button class="planet-btn" data-planet="earth">Earth</button>
+            <button class="planet-btn" data-planet="mars">Mars</button>
+            <button class="planet-btn" data-planet="jupiter">Jupiter</button>
+            <button class="planet-btn" data-planet="saturn">Saturn</button>
+            <button class="planet-btn" data-planet="uranus">Uranus</button>
+            <button class="planet-btn" data-planet="neptune">Neptune</button>
+          </div>
+        </div>
+
+        <div class="planet-info-panel">
+          <div class="info-header">
+            <h3 id="selected-planet">Sun</h3>
+            <button id="close-info" class="close-btn">×</button>
+          </div>
+          <div class="info-content">
+            <div class="planet-stats">
+              <div class="stat">
+                <span class="stat-label">Type:</span>
+                <span class="stat-value" id="planet-type">Star</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Diameter:</span>
+                <span class="stat-value" id="planet-diameter"
+                  >0 km</span
+                >
+              </div>
+              <div class="stat">
+                <span class="stat-label">Mass:</span>
+                <span class="stat-value" id="planet-mass">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Gravity:</span>
+                <span class="stat-value" id="planet-gravity">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Distance from Sun:</span>
+                <span class="stat-value" id="planet-distance">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Orbital Period:</span>
+                <span class="stat-value" id="planet-orbit">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Rotation Period:</span>
+                <span class="stat-value" id="planet-rotation">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Planet Temperature: </span>
+                <span class="stat-value" id="planet-cloudtemperature">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Wind Speed: </span>
+                <span class="stat-value" id="planet-windspeed">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Composition:</span>
+                <span class="stat-value" id="planet-composition">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Moons: </span>
+                <span class="stat-value" id="planet-moons">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Rings:</span>
+                <span class="stat-value" id="planet-rings">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Discovery year:</span>
+                <span class="stat-value" id="planet-discovery">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Fun Fact:</span>
+                <span class="stat-value" id="planet-Fun">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="educational-section">
+        <h2>Solar System Facts</h2>
+        <div class="facts-grid">
+          <div class="fact-card">
+            <i class="fas fa-ruler-combined"></i>
+            <h4>Scale</h4>
+            <p>The Sun contains 99.86% of all mass in the Solar System.</p>
+          </div>
+          <div class="fact-card">
+            <i class="fas fa-temperature-high"></i>
+            <h4>Temperatures</h4>
+            <p>Venus is hotter than Mercury due to its thick atmosphere.</p>
+          </div>
+          <div class="fact-card">
+            <i class="fas fa-ring"></i>
+            <h4>Rings</h4>
+            <p>
+              Saturn isn't the only planet with rings. Jupiter, Uranus, and
+              Neptune also have ring systems.
+            </p>
+          </div>
+          <div class="fact-card">
+            <i class="fas fa-water"></i>
+            <h4>Water</h4>
+            <p>
+              Earth is the only known planet with liquid water on its surface.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+
+    <script src="../load-navigation.js"></script>
+    <script src="solar-system.js"></script>
+  </body>
+</html>
