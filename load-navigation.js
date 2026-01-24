@@ -55,6 +55,10 @@ async function loadNavigation() {
     await loadMusicPlayer();
     initMenu();
     initDropdowns();
+    // Setup theme toggle if present in navigation
+    try {
+      setupThemeToggle();
+    } catch (e) {}
     highlightCurrentPage();
   } catch (error) {
     console.error("Navigation loading error:", error);
@@ -273,6 +277,71 @@ function loadScript(src) {
     script.onerror = reject;
     document.head.appendChild(script);
   });
+}
+
+// Theme toggle helper - applies saved theme and wires up #theme-toggle button
+function setupThemeToggle() {
+  try {
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  } catch (e) {
+    // ignore
+  }
+
+  function setIcons(btn) {
+    if (!btn) return;
+    const sun = btn.querySelector(".fa-sun");
+    const moon = btn.querySelector(".fa-moon");
+    const current = document.documentElement.getAttribute("data-theme");
+    if (current === "light") {
+      if (sun) sun.style.display = "block";
+      if (moon) moon.style.display = "none";
+    } else {
+      if (sun) sun.style.display = "none";
+      if (moon) moon.style.display = "block";
+    }
+  }
+
+  function setup(btn) {
+    if (!btn) return;
+    setIcons(btn);
+    btn.addEventListener("click", function () {
+      const current =
+        document.documentElement.getAttribute("data-theme") || "dark";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("theme", next);
+      } catch (e) {}
+      setIcons(btn);
+      this.style.transform = "scale(1.2) rotate(180deg)";
+      setTimeout(() => {
+        this.style.transform = "";
+      }, 300);
+    });
+  }
+
+  const existing = document.getElementById("theme-toggle");
+  if (existing) {
+    setup(existing);
+    return;
+  }
+
+  const mo = new MutationObserver((mutations, observer) => {
+    const btn = document.getElementById("theme-toggle");
+    if (btn) {
+      observer.disconnect();
+      setup(btn);
+    }
+  });
+  mo.observe(document.body, { childList: true, subtree: true });
+  setTimeout(() => {
+    const btn = document.getElementById("theme-toggle");
+    if (btn) setup(btn);
+    mo.disconnect();
+  }, 2000);
 }
 
 async function loadMusicPlayer() {

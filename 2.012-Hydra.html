@@ -14,9 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
+               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
+               font-src 'self' https://fonts.gstatic.com;
+               connect-src 'self' https://api.nasa.gov;">
   </head>
   <body>
-    <main>
+    <main>  
       <section id="section1" class="content-section">
         <div class="section-header">
           <h2>Hydra</h2>

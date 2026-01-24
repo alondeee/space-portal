@@ -336,20 +336,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
-    renderer.domElement.addEventListener("click", (event) => {
+    function handlePointer(clientX, clientY) {
       const rect = renderer.domElement.getBoundingClientRect();
-      mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      mouse.x = ((clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((clientY - rect.top) / rect.height) * 2 + 1;
 
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObjects(Object.values(planets));
-
       if (intersects.length > 0) {
         const clickedPlanet = intersects[0].object;
-        console.log("Clicked planet:", clickedPlanet.userData.name);
+        console.log("Selected planet:", clickedPlanet.userData.name);
 
         if (controls) {
           controls.target.copy(clickedPlanet.position);
+          // move camera closer to the planet smoothly
           camera.position.sub(controls.target);
           camera.position.multiplyScalar(0.03);
           camera.position.add(controls.target);
@@ -358,7 +358,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updatePlanetInfo(clickedPlanet.userData.name);
       }
+    }
+
+    // Mouse click (desktop)
+    renderer.domElement.addEventListener("click", (event) => {
+      handlePointer(event.clientX, event.clientY);
     });
+
+    // Touch support (mobile): treat a short tap with minimal movement as a selection
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+
+    renderer.domElement.addEventListener(
+      "touchstart",
+      (e) => {
+        if (e.touches && e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchStartTime = Date.now();
+        }
+      },
+      { passive: true },
+    );
+
+    renderer.domElement.addEventListener(
+      "touchend",
+      (e) => {
+        const touch = e.changedTouches && e.changedTouches[0];
+        if (!touch) return;
+        const dx = Math.abs(touch.clientX - touchStartX);
+        const dy = Math.abs(touch.clientY - touchStartY);
+        const dt = Date.now() - touchStartTime;
+        // small movement and quick tap
+        if (dx < 12 && dy < 12 && dt < 400) {
+          handlePointer(touch.clientX, touch.clientY);
+        }
+      },
+      { passive: true },
+    );
   }
   function updatePlanetInfo(planetName) {
     const planetInfo = {
