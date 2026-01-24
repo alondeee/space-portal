@@ -101,7 +101,7 @@ const searchIndex = [
   },
   {
     id: "Lunar-Eclipse",
-    title: "Solar Eclipse",
+    title: "Lunar Eclipse",
     content: "Lunar Eclipse, A event in the solar system",
     url: "1.42-lunar-eclipse.html",
     category: "Gallery",
