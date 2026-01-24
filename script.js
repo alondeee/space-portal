@@ -1,26 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Page-specific scripts loading...");
-  setTimeout(() => {
-    initScrollIndicator();
-    initScrollAnimations();
-    initInteractiveElements();
-    initSlideshow();
-    if (window.location.pathname.includes("quiz")) {
-      initQuiz();
-    }
-
-    if (window.location.pathname.includes("gallery")) {
-      initGallery();
-    }
-
-    if (window.location.pathname.includes("contact")) {
-      initContactForm();
-    }
-
-    console.log("✓ Page-specific scripts loaded");
-  }, 300);
-});
-
 function initDownloadButtons() {
   document.querySelectorAll(".download-btn").forEach((btn) => {
     btn.addEventListener("click", function (e) {
@@ -361,39 +338,6 @@ function hideTooltip() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const music = document.getElementById("background-music");
-  music.volume = 0.5;
-
-  document.body.addEventListener(
-    "click",
-    function () {
-      music.play().catch((e) => console.log("Autoplay blocked"));
-    },
-    { once: true },
-  );
-
-  document
-    .getElementById("play-music")
-    .addEventListener("click", () => music.play());
-  document
-    .getElementById("pause-music")
-    .addEventListener("click", () => music.pause());
-  const volEl = document.getElementById("volume-slider") || document.getElementById("volume-control");
-  if (volEl) {
-    volEl.addEventListener("input", (e) => {
-      music.volume = e.target.value;
-    });
-  }
-});
-
-const audio = document.getElementById("background-music");
-if (audio) {
-  audio.volume = 0.3;
-} else {
-  console.log("Music player not loaded yet (expected)");
-}
-
 function initThemeToggle() {
   const themeToggle = document.getElementById("theme-toggle");
   const sunIcon = document.querySelector(".fa-sun");
@@ -547,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function() {
     apiKey: 'npUBF5bibezNbFeCI4LdcOrYdgrZ6qRrqXswmMus',
     baseUrl: 'https://api.nasa.gov/planetary/apod',
     useCache: true,
-    cacheDuration: 3600000 // 1 hour in milliseconds
+    cacheDuration: 3600000 
   };
   let currentAPOD = null;
   let isFullscreen = false;
@@ -620,7 +564,6 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       const cached = getCachedAPOD('today');
       if (cached && config.useCache) {
-        console.log('Using cached APOD data');
         displayAPOD(cached);
         return;
       }
@@ -690,20 +633,16 @@ document.addEventListener('DOMContentLoaded', function() {
       elements.hdStatus.textContent = 'Standard Quality';
       elements.downloadBtn.disabled = false;
     }
-    
-    // Handle media type
     if (data.media_type === 'video') {
       displayVideo(data);
     } else {
       displayImage(data);
     }
     
-    // Show content, hide loading/error
     hideLoading();
     elements.content.style.display = 'grid';
     elements.error.style.display = 'none';
     
-    // Update download button
     if (elements.downloadBtn) {
       const downloadUrl = data.hdurl || data.url || data.thumbnail_url;
       elements.downloadBtn.dataset.url = downloadUrl;
@@ -712,28 +651,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function displayImage(data) {
-    // Show image, hide video
     elements.image.style.display = 'block';
     elements.videoWrapper.style.display = 'none';
     
-    // Set image source
     const imageUrl = data.url || data.thumbnail_url;
     elements.image.src = imageUrl;
     elements.image.alt = data.title || 'NASA Astronomy Picture of the Day';
     
-    // Update badge
     elements.mediaBadge.innerHTML = '<i class="fas fa-image"></i> Image';
   }
   
   function displayVideo(data) {
-    // Show video, hide image
     elements.image.style.display = 'none';
     elements.videoWrapper.style.display = 'block';
     
-    // Clear previous video
     elements.videoContainer.innerHTML = '';
     
-    // Check if it's YouTube
     const url = data.url || '';
     let embedHtml = '';
     
@@ -967,11 +900,9 @@ document.addEventListener('DOMContentLoaded', function() {
     currentAPOD: () => currentAPOD
   };
   
-  console.log('APOD initialized successfully');
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Page-specific scripts loading...");
   setTimeout(() => {
     initScrollIndicator();
     initScrollAnimations();
