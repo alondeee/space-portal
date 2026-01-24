@@ -356,8 +356,6 @@ async function loadNavigation() {
     const footerHtml = await footerResponse.text();
     document.body.insertAdjacentHTML("beforeend", footerHtml);
     
-    
-    // Load optional music player and initialize everything
     await loadMusicPlayer();
     initMenu();
     initDropdowns();
@@ -400,7 +398,7 @@ function initMenu() {
     }
     menuPanel.classList.remove("active");
     if (menuOverlay) menuOverlay.classList.remove("active");
-    document.body.style.overflow = ""; // Re-enable scrolling
+    document.body.style.overflow = ""; 
   }
 
   if (closeMenu) {
