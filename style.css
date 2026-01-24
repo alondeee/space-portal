@@ -1511,9 +1511,8 @@ header .theme-toggle {
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 60vh;
+    min-height: 50vh;
     padding: 0 4%;
-    overflow: hidden;
   }
 
   .hero-content h2 {
