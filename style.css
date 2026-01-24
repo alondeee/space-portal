@@ -1511,8 +1511,11 @@ header .theme-toggle {
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 50vh;
-    padding: 0 4%;
+    min-height: 40vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   .hero-content h2 {
