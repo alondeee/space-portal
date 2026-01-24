@@ -1507,3 +1507,90 @@ header .theme-toggle {
   align-items: center;
   justify-content: center;
 }
+
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    padding: 0 4%;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .image-container,
+  .gallery-item img {
+    height: auto;
+    min-height: 120px;
+    object-fit: cover;
+  }
+
+  .gallery-item img {
+    height: 160px;
+  }
+
+  .menu-panel {
+    width: 100%;
+    right: -100%;
+  }
+
+  .menu-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  #site-search {
+    width: 120px;
+    padding: 6px 10px;
+  }
+
+  .slide-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .slide-dots {
+    bottom: 18px;
+    gap: 6px;
+  }
+
+  #music-player {
+    display: none; /* hide music controls on small phones */
+  }
+
+  .apod-content {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .apod-media-container {
+    min-height: 180px;
+  }
+
+  .download-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .panel-image img {
+    max-height: 60vh;
+  }
+
+  .search-container {
+    margin-left: 8px;
+  }
+
+  .site-nav a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
