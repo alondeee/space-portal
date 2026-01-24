@@ -1513,6 +1513,7 @@ header .theme-toggle {
   .hero {
     min-height: 60vh;
     padding: 0 4%;
+    overflow: hidden;
   }
 
   .hero-content h2 {
