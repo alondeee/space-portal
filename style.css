@@ -1508,11 +1508,11 @@ header .theme-toggle {
   justify-content: center;
 }
 
-
+/* 
 @media (max-width: 480px) {
   .hero {
     min-height: 40vh;
-    padding: 60px 0 60px 20px;
+    padding: 0 5%;
     width: 100vw;
     box-sizing: border-box;
   }
@@ -1520,6 +1520,7 @@ header .theme-toggle {
   .hero-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: left;
   }
 
   .gallery-grid {
@@ -1566,7 +1567,7 @@ header .theme-toggle {
   }
 
   #music-player {
-    display: none; /* hide music controls on small phones */
+    display: none; 
   }
 
   .apod-content {
@@ -1588,11 +1589,41 @@ header .theme-toggle {
   }
 
   .search-container {
-    margin-left: 8px;
+    margin-left: 6px;
   }
 
   .site-nav a {
     padding: 0.6rem 0.8rem;
     font-size: 0.95rem;
+  }
+} */
+
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Reset any potential overflow */
+  .slideshow,
+  .slide,
+  .hero,
+  .hero-content {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  
+  /* Fix for gallery images */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  /* Fix download buttons */
+  .download-btn {
+    right: 5px;
+    bottom: 5px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
   }
 }
