@@ -313,9 +313,6 @@ function initContactForm() {
 }
 
 function initThemeToggle() {
-  if (window.__themeInitialized) {
-    return;
-  }
   const themeToggle = document.getElementById("theme-toggle");
   const sunIcon = document.querySelector(".fa-sun");
   const moonIcon = document.querySelector(".fa-moon");
