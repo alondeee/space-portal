@@ -51,6 +51,16 @@ header {
 
 .hero {
   background-color: var(--bg-primary);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  background: url(images/Nebula.jpg) center/cover;
+  position: relative;
+  color: lightgreen;
 }
 
 .content-section.dark-section {
@@ -104,19 +114,6 @@ header {
   font-size: 0.9rem;
   color: lightgreen;
   margin-top: 0.2rem;
-}
-
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 5%;
-  background: url(images/Nebula.jpg) center/cover;
-  position: relative;
-  color: lightgreen;
 }
 
 .hero-content h2 {
@@ -344,7 +341,7 @@ footer {
   top: 0;
   right: -400px;
   width: 350px;
-  height: 100vh;
+  height: 60vh;
   z-index: 1000;
   transition: right 0.3s ease;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
@@ -523,7 +520,7 @@ footer {
 }
 
 .dropdown-section h4 {
-color: var(--text-accent);
+  color: var(--text-accent);
   margin-bottom: 1rem;
   font-size: 1.1rem;
   border-bottom: 1px solid var(--border-color);
@@ -1305,7 +1302,7 @@ header .theme-toggle {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
