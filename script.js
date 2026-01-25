@@ -312,6 +312,61 @@ function initContactForm() {
   }
 }
 
+// function initThemeToggle() {
+//   const themeToggle = document.getElementById("theme-toggle");
+//   const sunIcon = document.querySelector(".fa-sun");
+//   const moonIcon = document.querySelector(".fa-moon");
+
+//   if (!themeToggle) {
+//     console.log("Theme toggle button not found");
+//     return;
+//   }
+
+//   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+//   const savedTheme = localStorage.getItem("theme");
+
+//   if (savedTheme === "light" || (!savedTheme && prefersDarkScheme.matches)) {
+//     document.documentElement.setAttribute("data-theme", "light");
+//     if (sunIcon) sunIcon.style.display = "block";
+//     if (moonIcon) moonIcon.style.display = "none";
+//   } else {
+//     document.documentElement.setAttribute("data-theme", "dark");
+//     if (sunIcon) sunIcon.style.display = "none";
+//     if (moonIcon) moonIcon.style.display = "block";
+//   }
+
+//   themeToggle.addEventListener("click", function () {
+//     const currentTheme = document.documentElement.getAttribute("data-theme");
+
+//     if (currentTheme === "dark") {
+//       document.documentElement.setAttribute("data-theme", "light");
+//       localStorage.setItem("theme", "light");
+//       if (sunIcon) sunIcon.style.display = "block";
+//       if (moonIcon) moonIcon.style.display = "none";
+//     } else {
+//       document.documentElement.setAttribute("data-theme", "dark");
+//       localStorage.setItem("theme", "dark");
+//       if (sunIcon) sunIcon.style.display = "none";
+//       if (moonIcon) moonIcon.style.display = "block";
+//     }
+
+//     this.style.transform = "scale(1.2) rotate(180deg)";
+//     setTimeout(() => {
+//       this.style.transform = "";
+//     }, 300);
+//   });
+
+//   prefersDarkScheme.addEventListener("change", (e) => {
+//     if (!localStorage.getItem("theme")) {
+//       if (e.matches) {
+//         document.documentElement.setAttribute("data-theme", "dark");
+//       } else {
+//         document.documentElement.setAttribute("data-theme", "light");
+//       }
+//     }
+//   });
+// }
+
 function initThemeToggle() {
   const themeToggle = document.getElementById("theme-toggle");
   const sunIcon = document.querySelector(".fa-sun");
