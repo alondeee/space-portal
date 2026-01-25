@@ -313,7 +313,6 @@ function initContactForm() {
 }
 
 function initThemeToggle() {
-  // If theme was already initialized by navigation loader, skip duplicate setup
   if (window.__themeInitialized) {
     return;
   }
