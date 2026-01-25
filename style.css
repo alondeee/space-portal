@@ -61,7 +61,7 @@ header {
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   border-bottom: 1px solid rgba(77, 171, 247, 0.2);
 }
 
@@ -479,11 +479,6 @@ footer {
 .dropdown-toggle:hover {
   background: rgba(77, 171, 247, 0.2);
   color: var(--text-accent);
-}
-
-.dropdown-arrow {
-  font-size: 0.8rem;
-  transition: transform 0.3s ease;
 }
 
 .nav-item.dropdown:hover .dropdown-arrow {
@@ -1488,7 +1483,6 @@ header .theme-toggle {
   justify-content: center;
 }
 
-/* When APOD fullscreen is active, adjust navigation/menu/dropdowns to avoid visual issues */
 body.in-fullscreen .menu-panel,
 body.in-fullscreen .menu-panel.active {
   top: 0 !important;
@@ -1499,12 +1493,10 @@ body.in-fullscreen .menu-panel.active {
   right: 0 !important;
 }
 
-/* Ensure the overlay doesn't add extra darkening while fullscreen content is on top */
 body.in-fullscreen .menu-overlay {
   display: none !important;
 }
 
-/* Make dropdowns fully opaque and non-transparent while fullscreen is active */
 body.in-fullscreen .dropdown-content,
 body.in-fullscreen .simple-dropdown-content {
   background: var(--bg-surface) !important;
