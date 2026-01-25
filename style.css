@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 :root {
@@ -40,13 +41,28 @@
 }
 
 body {
-  background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--star-white);
+  background-color: var(--space-blue);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
 }
 
 header {
-  background-color: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(10, 14, 23, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(77, 171, 247, 0.2);
 }
 
 .hero {
@@ -67,14 +83,6 @@ header {
   background-color: var(--bg-secondary);
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  color: var(--star-white);
-  background-color: var(--space-blue);
-  overflow-x: hidden;
-}
-
 h1,
 h2,
 h3,
@@ -87,19 +95,6 @@ h4 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  background-color: rgba(10, 14, 23, 0.95);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(77, 171, 247, 0.2);
 }
 
 .logo h1 {
