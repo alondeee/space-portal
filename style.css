@@ -1489,6 +1489,37 @@ header .theme-toggle {
   justify-content: center;
 }
 
+/* When APOD fullscreen is active, adjust navigation/menu/dropdowns to avoid visual issues */
+body.in-fullscreen .menu-panel,
+body.in-fullscreen .menu-panel.active {
+  top: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  overflow: auto !important;
+  box-shadow: none !important;
+  right: 0 !important;
+}
+
+/* Ensure the overlay doesn't add extra darkening while fullscreen content is on top */
+body.in-fullscreen .menu-overlay {
+  display: none !important;
+}
+
+/* Make dropdowns fully opaque and non-transparent while fullscreen is active */
+body.in-fullscreen .dropdown-content,
+body.in-fullscreen .simple-dropdown-content {
+  background: var(--bg-surface) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.in-fullscreen .dropdown-content::before {
+  border-bottom-color: var(--bg-surface) !important;
+}
+
 @media (max-width: 480px) {
   .hero {
     text-align: left;

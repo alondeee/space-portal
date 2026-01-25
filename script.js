@@ -773,6 +773,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.body.appendChild(fullscreenDiv);
     document.body.style.overflow = 'hidden';
+    try { document.body.classList.add('in-fullscreen'); } catch (e) {}
     isFullscreen = true;
   }
   
@@ -782,6 +783,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fullscreenDiv.remove();
     }
     document.body.style.overflow = '';
+    try { document.body.classList.remove('in-fullscreen'); } catch (e) {}
     isFullscreen = false;
   }
   

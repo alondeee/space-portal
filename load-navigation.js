@@ -366,3 +366,30 @@ async function loadMusicPlayer() {
     console.log("Music player not loaded:", error);
   }
 }
+
+// Monitor browser-native fullscreen (F11 / browser fullscreen) and toggle body class
+function monitorBrowserFullscreen() {
+  function update() {
+    try {
+      if (document.fullscreenElement || document.webkitIsFullScreen || document.mozFullScreen) {
+        document.body.classList.add("in-fullscreen");
+      } else {
+        document.body.classList.remove("in-fullscreen");
+      }
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  document.addEventListener("fullscreenchange", update);
+  document.addEventListener("webkitfullscreenchange", update);
+  document.addEventListener("mozfullscreenchange", update);
+  document.addEventListener("MSFullscreenChange", update);
+
+  // initial check
+  setTimeout(update, 50);
+}
+
+try {
+  monitorBrowserFullscreen();
+} catch (e) {}
