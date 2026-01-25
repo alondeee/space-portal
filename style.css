@@ -426,13 +426,8 @@ footer{
 }
 
 @media (min-width: 1200px) {    
-    .menu-panel {
-        width: 300px;
-    }
-    
     .menu-toggle {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        margin-left: auto;
     }
 }
 
