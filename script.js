@@ -312,32 +312,6 @@ function initContactForm() {
   }
 }
 
-function showTooltip(element, text) {
-  const tooltip = document.createElement("div");
-  tooltip.className = "tooltip";
-  tooltip.textContent = text;
-  tooltip.style.position = "absolute";
-  tooltip.style.background = "rgba(0,0,0,0.8)";
-  tooltip.style.color = "white";
-  tooltip.style.padding = "5px 10px";
-  tooltip.style.borderRadius = "4px";
-  tooltip.style.zIndex = "10000";
-
-  const rect = element.getBoundingClientRect();
-  tooltip.style.top = rect.top - 30 + "px";
-  tooltip.style.left = rect.left + rect.width / 2 + "px";
-
-  tooltip.id = "current-tooltip";
-  document.body.appendChild(tooltip);
-}
-
-function hideTooltip() {
-  const tooltip = document.getElementById("current-tooltip");
-  if (tooltip) {
-    tooltip.remove();
-  }
-}
-
 function initThemeToggle() {
   // If theme was already initialized by navigation loader, skip duplicate setup
   if (window.__themeInitialized) {
