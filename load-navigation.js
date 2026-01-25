@@ -342,6 +342,10 @@ function setupThemeToggle() {
     if (btn) setup(btn);
     mo.disconnect();
   }, 2000);
+  // mark global flag so other scripts know theme was initialized
+  try {
+    window.__themeInitialized = true;
+  } catch (e) {}
 }
 
 async function loadMusicPlayer() {

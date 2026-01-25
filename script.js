@@ -339,6 +339,10 @@ function hideTooltip() {
 }
 
 function initThemeToggle() {
+  // If theme was already initialized by navigation loader, skip duplicate setup
+  if (window.__themeInitialized) {
+    return;
+  }
   const themeToggle = document.getElementById("theme-toggle");
   const sunIcon = document.querySelector(".fa-sun");
   const moonIcon = document.querySelector(".fa-moon");
