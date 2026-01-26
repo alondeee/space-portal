@@ -370,7 +370,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   z-index: 999;
   transition: opacity 0.3s ease;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .menu-overlay.active {
@@ -1621,4 +1621,118 @@ body.in-fullscreen .dropdown-content::before {
     padding: 0.6rem 0.8rem;
     font-size: 0.95rem;
   }
+}
+
+/* ===== QUIZ STYLES ===== */
+.quiz-section {
+  padding: 40px 5%;
+  background: var(--galaxy-dark);
+}
+
+.quiz-question {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(77, 171, 247, 0.2);
+}
+
+.quiz-question h3 {
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quiz-option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.quiz-option:hover {
+  background: rgba(77, 171, 247, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Correct/Incorrect feedback */
+.quiz-option.correct {
+  background: rgba(76, 175, 80, 0.3);
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+.quiz-option.incorrect {
+  background: rgba(244, 67, 54, 0.3);
+  border-color: #f44336;
+  color: #f44336;
+}
+
+/* ===== CONTACT FORM STYLES ===== */
+.contact-section {
+  padding: 40px 5%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(77, 171, 247, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--accent-blue);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(77, 171, 247, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contact-form .btn-primary {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-top: 10px;
 }

@@ -94,16 +94,39 @@ function initQuiz() {
   console.log("Initializing quiz...");
   const quizQuestions = document.querySelectorAll(".quiz-question");
   const quizOptions = document.querySelectorAll(".quiz-option");
+  const scoreDisplay = document.getElementById("quiz-score");
+  
+  let score = 0;
+  let answered = 0;
+  const totalQuestions = quizQuestions.length;
 
   if (quizQuestions.length > 0) {
     quizOptions.forEach((option) => {
       option.addEventListener("click", function () {
+        if (this.classList.contains('answered')) return;
+        
         const isCorrect = this.dataset.correct === "true";
-
+        const question = this.closest('.quiz-question');
+        question.querySelectorAll('.quiz-option').forEach(opt => {
+          opt.classList.add('answered');
+          opt.style.pointerEvents = 'none';
+        });
         if (isCorrect) {
           this.classList.add("correct");
+          score++;
         } else {
           this.classList.add("incorrect");
+          question.querySelector('[data-correct="true"]').classList.add('correct');
+        }
+        
+        answered++;
+        if (scoreDisplay) {
+          scoreDisplay.textContent = `Score: ${score}/${totalQuestions}`;
+        }
+        if (answered === totalQuestions) {
+          setTimeout(() => {
+            alert(`Quiz Complete!\nYou scored ${score}/${totalQuestions}`);
+          }, 500);
         }
       });
     });
@@ -886,6 +909,8 @@ document.addEventListener("DOMContentLoaded", function () {
     initSlideshow();
     initThemeToggle();
     initSearch(); // ADD THIS LINE
+    initQuiz();
+    initContactForm();
     
 
     if (window.location.pathname.includes("quiz")) {
