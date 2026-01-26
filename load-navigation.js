@@ -82,16 +82,11 @@ function initMenu() {
     document.body.style.overflow = "hidden";
   });
 
-  function closeMenuFunc(e) {
-    if (e && e.target.closest(".dropdown-content")) {
-      return;
-    }
-    
+  function closeMenuFunc() {
     menuPanel.classList.remove("active");
     menuOverlay.style.display = "none";
     document.body.style.overflow = "";
   }
-
   if (closeMenu) {
     closeMenu.addEventListener("click", closeMenuFunc);
   }
@@ -102,21 +97,13 @@ function initMenu() {
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && menuPanel.classList.contains("active")) {
-      closeMenuFunc(event);
+      closeMenuFunc();
     }
   });
 
-  document.querySelectorAll(".menu-panel .site-nav a, .menu-panel a").forEach((link) => {
+  document.querySelectorAll(".menu-panel .site-nav a").forEach((link) => {
     link.addEventListener("click", function (e) {
-      if (this.classList.contains("dropdown-toggle") || 
-          this.classList.contains("keep-open") ||
-          this.getAttribute("href") === "#") {
-        return;
-      }
-      
-      menuPanel.classList.remove("active");
-      menuOverlay.style.display = "none";
-      document.body.style.overflow = "";
+
     });
   });
 
@@ -125,7 +112,7 @@ function initMenu() {
         !menuPanel.contains(e.target) &&
         e.target !== menuToggle &&
         !menuToggle.contains(e.target)) {
-      closeMenuFunc(e);
+      closeMenuFunc();
     }
   });
 }
