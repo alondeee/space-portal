@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100vw;
 }
 
 :root {
@@ -1538,15 +1537,28 @@ body.in-fullscreen .dropdown-content::before {
   .hero {
     text-align: left;
     min-height: 40vh;
-    width: 100%;         /* Change from 100vw to 100% */
+    width: 100%; /* Change from 100vw to 100% */
     box-sizing: border-box;
     overflow-x: hidden;
-    margin-left: 0 !important;   /* Remove left margin */
-    margin-right: 0 !important;  /* Remove right margin */
+    margin-left: 0 !important; /* Remove left margin */
+    margin-right: 0 !important; /* Remove right margin */
     padding-left: max(20px, env(safe-area-inset-left));
     padding-right: max(20px, env(safe-area-inset-right));
     width: 100%;
     margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   .hero-content h2 {
