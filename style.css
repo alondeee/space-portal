@@ -1537,14 +1537,16 @@ body.in-fullscreen .dropdown-content::before {
 @media (max-width: 480px) {
   .hero {
     text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
     min-height: 40vh;
-    width: 100vw;
+    width: 100%;         /* Change from 100vw to 100% */
     box-sizing: border-box;
     overflow-x: hidden;
+    margin-left: 0 !important;   /* Remove left margin */
+    margin-right: 0 !important;  /* Remove right margin */
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    width: 100%;
+    margin: 0;
   }
 
   .hero-content h2 {
