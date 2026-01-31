@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
+    <title>Galaxies</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="Icon/brain.png" />
+    <link rel="icon" href="Icon/newspaper-folded.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,356 +14,34 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
+               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
+               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+               connect-src 'self' https://api.nasa.gov;">
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <h1>Space Educational Portal</h1>
-        <p class="tagline">Quiz</p>
-      </div>
-
-      <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </header>
-
-    <div class="menu-overlay" id="menuOverlay"></div>
-    <div class="menu-panel" id="menuPanel">
-      <div class="menu-header">
-        <h2>Menu</h2>
-        <button class="close-menu" id="closeMenu">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <nav class="site-nav">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
-        <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
-        <a href="resources.html"><i class="fas fa-book"></i> Resources</a>
-        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
-
-        <div class="nav-item dropdown">
-          <a href="events.html" class="dropdown-toggle">
-            <i class="fas fa-calendar-alt"></i> Events
-          </a>
-          <div class="dropdown-content">
-            <div class="dropdown-section">
-              <h4>Events</h4>
-              <a href="solar-eclipse.html">
-                <i class="fas fa-sun"></i> Solar Eclipse
-              </a>
-              <a href="lunar-eclipse.html">
-                <i class="fas fa-moon"></i> Lunar Eclipse
-              </a>
-              <a href="planetary-alignment.html">
-                <i class="fas fa-globe-americas"></i> Planetary Alignment
-              </a>
-              <a href="meteor-shower.html">
-                <i class="fas fa-star-shoot"></i> Meteor Shower
-              </a>
-              <a href="ISS-lookout.html">
-                <i class="fas fa"></i> ISS lookout
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav-item dropdown">
-          <a href="Explore.html" class="dropdown-toggle">
-            <i class="fas fa-"></i>Explore
-          </a>
-          <div class="dropdown-content">
-            <div class="dropdown-section">
-              <h4>Explore</h4>
-              <a href="Solar-system.html">
-                <i class="fas fa-sun"></i> Solar System
-              </a>
-              <a href="Milky way.html">
-                <i class="fas fa-galaxy"></i> Milky way
-              </a>
-
-              <a href="Local-group.html">
-                <i class="fas fa-moon"></i> Local galaxy cluster
-              </a>
-              <a href="Virgo.html">
-                <i class="fas fa-moon"></i> Virgo local cluster
-              </a>
-              <a href="Laniakea.html">
-                <i class="fas fa-moon"></i> Laniakea local cluster
-              </a>
-              <a href="Observable-universe.html">
-                <i class="fas fa-moon"></i> Observable universe
-              </a>
-              <a href="Real-universe.html">
-                <i class="fas fa-moon"></i> Real universe
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav-item dropdown">
-          <a href="telescopes.html" class="dropdown-toggle">
-            <i class="fas fa-satellite-dish"></i>Telescopes
-          </a>
-          <div class="dropdown-content">
-            <div class="dropdown-section">
-              <h4>Telescopes</h4>
-              <a href="astronomy.html">
-                <i class="fas fa-sun"></i> observatories
-              </a>
-              <a href="cosmology.html">
-                <i class="fas fa-moon"></i> telescopes
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav-item dropdown">
-          <a href="Discover.html" class="dropdown-toggle">
-            <i class="fas fa-"></i>Discover
-          </a>
-          <div class="dropdown-content">
-            <div class="dropdown-section">
-              <h4>Discover</h4>
-              <a href="Stars.html"> <i class="fas fa-sun"></i> Stars </a>
-              <a href="Exoplanets.html">
-                <i class="fas fa-galaxy"></i> Exoplanets
-              </a>
-
-              <a href="Neutron-stars.html">
-                <i class="fas fa-moon"></i> Neutron stars
-              </a>
-              <a href="Blackholes.html">
-                <i class="fas fa-moon"></i> Blackholes
-              </a>
-              <a href="Nebulas.html"> <i class="fas fa-moon"></i> Nebulas </a>
-              <a href="Galaxies.html"> <i class="fas fa-moon"></i> Galaxies </a>
-              <a href="Cluster.html"> <i class="fas fa-moon"></i> Clusters </a>
-              <a href="Supercluster.html">
-                <i class="fas fa-moon"></i> Superclusters
-              </a>
-              <a href="Walls-filaments.html">
-                <i class="fas fa-moon"></i> Walls and filaments
-              </a>
-              <a href="Superstructers.html">
-                <i class="fas fa-moon"></i> Superstructures
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav-item dropdown">
-          <a class="dropdown-toggle">
-            <i class="fas fa-crown"></i>Great Minds
-          </a>
-          <div class="dropdown-content">
-            <div class="dropdown-section">
-              <h4>Great Minds</h4>
-              <a href="astronomy-great-minds.html">
-                <i class="fas fa-sun"></i> Astronomy
-              </a>
-              <a href="cosmology-great-minds.html">
-                <i class="fas fa-moon"></i> Cosmology
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav-item dropdown">
-          <a href="education.html" class="dropdown-toggle">
-            <i class="fas fa-graduation-cap"></i>Education
-          </a>
-          <div class="dropdown-content">
-            <div class="dropdown-section">
-              <h4>Education</h4>
-              <a href="astronomy.html">
-                <i class="fas fa-sun"></i> Astronomy
-              </a>
-              <a href="cosmology.html">
-                <i class="fas fa-moon"></i> Cosmology
-              </a>
-              <a href="physics.html">
-                <i class="fas fa-calculator"></i> Physics
-              </a>
-              <a href="Extraterrestrial-life.html">
-                <i class="fas fa"></i> Extraterrestrial-life
-              </a>
-              <a href="Exoplanet-detect.html">
-                <i class="fas fa=calculator"></i> Exoplanets detection methods
-              </a>
-            </div>
-          </div>
-        </div>
-        <a href="quiz.html"><i class="fas fa-brain"></i> Quiz</a>
-        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-      </nav>
-    </div>
     <main>
-      <section class="page-hero">
-        <div class="hero-content">
-          <h1>MAIN PAGE HEADING HERE</h1>
-          <p class="subtitle">Brief description of what this page is about</p>
-          <div class="cta-buttons">
-            <a href="#section1" class="btn-primary">Learn More</a>
-            <a href="#section2" class="btn-secondary">Explore</a>
-          </div>
+      <section class="hero" id="Home">
+        <div class="scroll-indicator">
+          <i class="fas fa-chevron-down"></i>
         </div>
       </section>
 
       <section id="section1" class="content-section">
-        <div class="section-header">
-          <h2><i class="fas fa-icon-here"></i> SECTION 1 TITLE</h2>
-          <p>Brief description of this section</p>
-        </div>
-
         <div class="content-row">
           <div class="content-text">
-            <h3>Subheading if needed</h3>
-            <p>
-              Start typing your content here. Explain concepts, add information,
-              or describe features.
-            </p>
-
-            <ul>
-              <li>Point 1 about your topic</li>
-              <li>Point 2 about your topic</li>
-              <li>Point 3 about your topic</li>
-            </ul>
-
-            <p>
-              More detailed explanations can go here. Break complex topics into
-              simple paragraphs.
-            </p>
-          </div>
-
-          <div class="content-image">
-            <img src="images/your-image.jpg" alt="Description of image" />
-            <p class="image-caption">Caption explaining the image</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="section2" class="content-section dark-section">
-        <div class="section-header">
-          <h2><i class="fas fa-icon-here"></i> SECTION 2 TITLE</h2>
-          <p>Another section for more content</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <i class="fas fa-rocket"></i>
-            <h3>Feature 1 Title</h3>
-            <p>Description of this feature or point.</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="fas fa-satellite"></i>
-            <h3>Feature 2 Title</h3>
-            <p>Description of this feature or point.</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="fas fa-globe"></i>
-            <h3>Feature 3 Title</h3>
-            <p>Description of this feature or point.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="section3" class="content-section">
-        <div class="section-header">
-          <h2><i class="fas fa-chart-bar"></i> DATA SECTION</h2>
-          <p>Facts, statistics, or comparisons</p>
-        </div>
-
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Information</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Item 1</td>
-                <td>Description</td>
-                <td>Specific details</td>
-              </tr>
-              <tr>
-                <td>Item 2</td>
-                <td>Description</td>
-                <td>Specific details</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="gallery-preview" class="content-section dark-section">
-        <div class="section-header">
-          <h2><i class="fas fa-images"></i> IMAGE GALLERY</h2>
-          <p>Visual content related to your topic</p>
-        </div>
-
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="images/image1.jpg" alt="Image description" />
-            <p>Image caption or description</p>
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/image2.jpg" alt="Image description" />
-            <p>Image caption or description</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="resources" class="content-section">
-        <div class="section-header">
-          <h2><i class="fas fa-external-link-alt"></i> ADDITIONAL RESOURCES</h2>
-          <p>Links for further learning</p>
-        </div>
-
-        <div class="resources-list">
-          <div class="resource-item">
-            <h3>
-              <a href="https://example.com" target="_blank">Resource Title</a>
-            </h3>
-            <p>Brief description of what this resource offers.</p>
+            <h3>Under Construction</h3>
+            <p class="subtitle">Making astronomy accessible to everyone</p>
           </div>
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <p>For more information, visit:</p>
-          <p>
-            <a href="https://scholar.google.com/">Google Scholar</a>
-          </p>
-          <p><a href="https://www.nasa.gov/">NASA</a></p>
-          <p><a href="https://www.esa.int/">ESA: European Space Agency</a></p>
-          <p>
-            <a href="https://www.isro.gov.in"
-              >ISRO: Indian Space Research Organisation</a
-            >
-          </p>
-          <p><a href="https://www.spacex.com">SpaceX</a></p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 NASA Educational Portal</p>
-        <p>All rights reserved.</p>
-        <p>For future explorers.</p>
-      </div>
-    </footer>
-
+    <script src="search-index.js"></script>
     <script src="script.js"></script>
-
+    <script src="load-navigation.js"></script>
     <script>
       console.log("Page loaded successfully!");
     </script>
