@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planetary-Alignment</title>
+    <title>News</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="Icon/stars.png" />
+    <link rel="icon" href="Icon/newspaper-folded.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,6 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
+               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
+               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+               connect-src 'self' https://api.nasa.gov;">
   </head>
   <body>
     <main>
@@ -35,7 +42,6 @@
     <script src="search-index.js"></script>
     <script src="script.js"></script>
     <script src="load-navigation.js"></script>
-
     <script>
       console.log("Page loaded successfully!");
     </script>
