@@ -1750,19 +1750,13 @@ body.in-fullscreen .dropdown-content::before {
   font-size: 1.1rem;
   margin-top: 10px;
 }
-/* 
+
 .preview-box {
-  border: 1px solid #ddd;
+  border: 1px solid #484848;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   background: white;
-  max-width: 300px;
-} */
-
-.preview-box {
-  border: 2px solid blue; /* Temporary to see if it exists */
   margin: 10px 0;
-  padding: 15px;
-  background: #f5f5f5;
+  max-width: 300px;
 }
