@@ -1753,10 +1753,11 @@ body.in-fullscreen .dropdown-content::before {
 
 .preview-box {
   border: 1px solid #484848;
+  color: black;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: rgb(51, 50, 50);
   margin: 10px 0;
   max-width: 300px;
   display: inline-block;
