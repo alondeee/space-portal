@@ -1759,6 +1759,7 @@ body.in-fullscreen .dropdown-content::before {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: rgb(51, 50, 50);
   margin: 10px 0;
-  max-width: 300px;
+  width: 350px;
+  height: 450px;
   display: inline-block;
 }
