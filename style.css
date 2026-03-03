@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -43,7 +45,7 @@
 
 body {
   color: var(--text-primary);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Orbitron", sans-serif;
   line-height: 1.6;
   color: var(--star-white);
   background-color: var(--space-blue);
@@ -68,7 +70,7 @@ header {
 
 .hero {
   background-color: var(--bg-primary);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -126,7 +128,7 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 img {
