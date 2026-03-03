@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +43,7 @@
 
 body {
   color: var(--text-primary);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: var(--star-white);
   background-color: var(--space-blue);
@@ -66,6 +68,7 @@ header {
 
 .hero {
   background-color: var(--bg-primary);
+  font-family: "Montserrat", sans-serif;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -101,12 +104,14 @@ a {
   color: lightblue;
   display: flex;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
   gap: 0.5rem;
 }
 
 .logo .tagline {
   font-size: 0.9rem;
   color: lightgreen;
+  font-family: "Montserrat", sans-serif;
   margin-top: 0.2rem;
 }
 
@@ -121,6 +126,7 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-family: "Montserrat", sans-serif;
 }
 
 img {
@@ -133,6 +139,7 @@ img {
   max-width: 700px;
   margin: 0 auto 2.5rem;
   color: #ffffff;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cta-buttons {
@@ -230,7 +237,8 @@ img {
 .content-text h3 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: lightgreen;
+  color: rgb(0, 242, 255);
+  font-family: "Montserrat", sans-serif;
 }
 
 .content-text p {
@@ -255,6 +263,7 @@ footer {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Montserrat", sans-serif;
   color: #777;
 }
 
@@ -269,6 +278,7 @@ footer {
   padding: 1.5rem 0;
   color: #777;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Montserrat", sans-serif;
   margin-top: 2rem;
 }
 
@@ -321,6 +331,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -343,6 +354,7 @@ footer {
   flex-direction: column;
   background: var(--bg-primary);
   box-shadow: -5px 0 15px var(--shadow-light);
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
 }
 
@@ -357,6 +369,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border-color);
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu-overlay {
