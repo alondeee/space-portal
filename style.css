@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -1768,17 +1768,25 @@ body.in-fullscreen .dropdown-content::before {
 
 .preview-box {
   border: 1px solid #484848;
-  color: linear-gradient(
-    to right,
-    #00fff7,
-    #00ff08
-  );;
+  color: #00fff7;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: rgb(51, 50, 50);
   margin: 10px 0;
-  width: 350px;
-  height: 450px;
-  display: inline-block;
+  width: 280px; /* All same width */
+  height: 180px; /* All same height */
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.uniform-card {
+  background: white;
+
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
 }
