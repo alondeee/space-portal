@@ -1798,5 +1798,12 @@ body.in-fullscreen .dropdown-content::before {
   flex-wrap: wrap;   
   gap: 20px;        
   padding: 20px;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.preview-box:hover {
+ transform: scale(1.03);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ z-index: 10;
+ cursor: pointer;
 }
