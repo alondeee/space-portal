@@ -1775,7 +1775,7 @@ body.in-fullscreen .dropdown-content::before {
   background: rgb(51, 50, 50);
   margin: 10px 0;
   width: 280px; /* All same width */
-  height: 180px; /* All same height */
+  height: 380px; /* All same height */
   display: flex;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -1786,7 +1786,17 @@ body.in-fullscreen .dropdown-content::before {
 
 .preview-image {
   width: 100%;
-  height: 140px;  /* Fixed image height */
+  height: 140px; 
   object-fit: cover;
+  object-fit: contain;
+  background-color: #000; 
   display: block;
+}
+
+#preview-con {
+  display: flex;       
+  flex-wrap: wrap;   
+  gap: 20px;        
+  padding: 20px;
+  justify-content: center;
 }
