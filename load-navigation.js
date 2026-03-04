@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function loadNavigation() {
   try {
-    const navResponse = await fetch("navigation.html");
+    const navResponse = await fetch("/navigation.html");
     const navHtml = await navResponse.text();
     document.body.insertAdjacentHTML("afterbegin", navHtml);
 
-    const footerResponse = await fetch("footer.html");
+    const footerResponse = await fetch("/footer.html");
     const footerHtml = await footerResponse.text();
     document.body.insertAdjacentHTML("beforeend", footerHtml);
 
@@ -241,7 +241,7 @@ function highlightCurrentPage() {
 
 async function loadMusicPlayer() {
   try {
-    const response = await fetch("music-player.html");
+    const response = await fetch("/music-player.html");
     if (!response.ok) {
       return;
     }
