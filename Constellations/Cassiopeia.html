@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,26 +8,29 @@
     <link rel="icon" href="../Icon & Logos/stars.png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
     />
-    <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
-               font-src 'self' https://fonts.gstatic.com;
-               connect-src 'self' https://api.nasa.gov;">
   </head>
   <body>
     <main>
       <section id="section1" class="content-section">
         <div class="section-header">
           <h2>Cassiopeia</h2>
-          <p>Cassiopeia is easily recognized by its distinctive "W" asterism of five bright stars</p>
+          <p>
+            Cassiopeia is easily recognized by its distinctive "W" asterism of
+            five bright stars
+          </p>
         </div>
 
         <div class="content-row">
@@ -49,7 +52,10 @@
             <p>
               Notable Stars:
               <li>V509 Cassiopeiae - yellow hypergiant</li>
-              <li>Tycho's Star (SN 1572 remnant) - supernova observed by Tycho Brahe</li>
+              <li>
+                Tycho's Star (SN 1572 remnant) - supernova observed by Tycho
+                Brahe
+              </li>
             </p>
             <p>
               Famous Deepsky objects:
@@ -71,8 +77,7 @@
       </section>
 
       <section id="section1" class="content-section">
-        <div class="section-header">
-        </div>
+        <div class="section-header"></div>
 
         <div class="content-row">
           <div class="content-text">
@@ -81,10 +86,17 @@
             <li>Area: 598 square degrees</li>
             <li>Brightest Star: Schedar (α Cassiopeiae)</li>
             <li>Best Visible: November - February</li>
-            <li>Mythology: Represents the vain queen Cassiopeia, mother of Andromeda, who boasted about her beauty.</li>
+            <li>
+              Mythology: Represents the vain queen Cassiopeia, mother of
+              Andromeda, who boasted about her beauty.
+            </li>
             <li>Circumpolar constellation for observers north of 40°N.</li>
-            <li>Contains many open clusters due to its location in the Milky Way.</li>
-            <li>Neighbours: Cepheus, Camelopardalis, Perseus, Andromeda, Lacerta</li>
+            <li>
+              Contains many open clusters due to its location in the Milky Way.
+            </li>
+            <li>
+              Neighbours: Cepheus, Camelopardalis, Perseus, Andromeda, Lacerta
+            </li>
           </div>
 
           <div class="content-image">
@@ -95,8 +107,8 @@
       </section>
     </main>
 
-  <script src="../load-navigation.js"></script>
-  <script src="../script.js"></script>
+    <script src="../load-navigation.js"></script>
+    <script src="../script.js"></script>
     <script>
       console.log("Page loaded successfully!");
     </script>

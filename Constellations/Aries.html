@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,19 +8,19 @@
     <link rel="icon" href="../Icon & Logos/stars.png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
     />
-    <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
-               font-src 'self' https://fonts.gstatic.com;
-               connect-src 'self' https://api.nasa.gov;">
   </head>
   <body>
     <main>
@@ -69,8 +69,7 @@
       </section>
 
       <section id="section1" class="content-section">
-        <div class="section-header">
-        </div>
+        <div class="section-header"></div>
 
         <div class="content-row">
           <div class="content-text">
@@ -80,7 +79,9 @@
             <li>Brightest Star: Hamal (α Arietis)</li>
             <li>Best Visible: November - December</li>
             <li>Zodiac Position: March 21 - April 19</li>
-            <li>Mythology: Represents the winged ram with the Golden Fleece.</li>
+            <li>
+              Mythology: Represents the winged ram with the Golden Fleece.
+            </li>
             <li>Location: Northern celestial hemisphere (NQ1)</li>
             <li>Neighbours: Perseus, Triangulum, Pisces, Cetus, Taurus</li>
           </div>
@@ -93,8 +94,8 @@
       </section>
     </main>
 
-  <script src="../load-navigation.js"></script>
-  <script src="../script.js"></script>
+    <script src="../load-navigation.js"></script>
+    <script src="../script.js"></script>
     <script>
       console.log("Page loaded successfully!");
     </script>

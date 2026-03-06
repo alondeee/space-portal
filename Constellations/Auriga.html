@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,19 +8,19 @@
     <link rel="icon" href="Icon/brain.png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
     />
-    <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
-               font-src 'self' https://fonts.gstatic.com;
-               connect-src 'self' https://api.nasa.gov;">
   </head>
   <body>
     <main>
@@ -64,29 +64,39 @@
 
           <div class="content-image">
             <img src="images/Auriga.jpg" alt="Constellation Auriga" />
-            <img src="images/M36-M37-M38.jpg" alt="Open Clusters M36, M37, M38" />
+            <img
+              src="images/M36-M37-M38.jpg"
+              alt="Open Clusters M36, M37, M38"
+            />
           </div>
         </div>
       </section>
 
       <section id="section1" class="content-section">
-        <div class="section-header">
-        </div>
+        <div class="section-header"></div>
 
         <div class="content-row">
           <div class="content-text">
             <h3>Auriga - Foundational Data</h3>
             <li>Rank: 21st largest Constellation</li>
             <li>Area: 657 square degrees</li>
-            <li>Brightest Star: Capella (α Aurigae) - 6th brightest in night sky</li>
+            <li>
+              Brightest Star: Capella (α Aurigae) - 6th brightest in night sky
+            </li>
             <li>Best Visible: December - February</li>
-            <li>Mythology: Represents a charioteer, often depicted holding a goat (Capella) and her kids.</li>
+            <li>
+              Mythology: Represents a charioteer, often depicted holding a goat
+              (Capella) and her kids.
+            </li>
             <li>Location: Northern celestial hemisphere (NQ2)</li>
             <li>Neighbours: Camelopardalis, Perseus, Taurus, Gemini, Lynx</li>
           </div>
 
           <div class="content-image">
-            <img src="images/Flaming-Star-Nebula.jpg" alt="IC 405 Flaming Star Nebula" />
+            <img
+              src="images/Flaming-Star-Nebula.jpg"
+              alt="IC 405 Flaming Star Nebula"
+            />
             <img src="images/Capella.jpg" alt="Star Capella" />
           </div>
         </div>
