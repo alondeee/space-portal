@@ -65,61 +65,129 @@ document.addEventListener("DOMContentLoaded", function () {
 //   }
 // }
 
+// async function loadNavigation() {
+//   try {
+//     console.log("📁 Current location:", window.location.pathname);
+//     console.log("📁 Root path:", window.location.origin);
+    
+//     // Test navigation.html
+//     console.log("🔍 Fetching: /navigation.html");
+//     const navResponse = await fetch("/navigation.html");
+//     console.log("📊 navigation.html status:", navResponse.status);
+    
+//     if (!navResponse.ok) {
+//       console.error("❌ navigation.html not found! Status:", navResponse.status);
+//       console.log("💡 Trying without leading slash...");
+      
+//       // Try without leading slash
+//       const navResponse2 = await fetch("navigation.html");
+//       console.log("📊 navigation.html (no slash) status:", navResponse2.status);
+      
+//       if (!navResponse2.ok) {
+//         throw new Error("navigation.html not found with any path");
+//       }
+      
+//       const navHtml = await navResponse2.text();
+//       document.body.insertAdjacentHTML("afterbegin", navHtml);
+//     } else {
+//       const navHtml = await navResponse.text();
+//       document.body.insertAdjacentHTML("afterbegin", navHtml);
+//     }
+    
+//     // Test footer.html
+//     console.log("🔍 Fetching: /footer.html");
+//     const footerResponse = await fetch("/footer.html");
+//     console.log("📊 footer.html status:", footerResponse.status);
+    
+//     if (!footerResponse.ok) {
+//       console.error("❌ footer.html not found! Status:", footerResponse.status);
+      
+//       // Try without leading slash
+//       const footerResponse2 = await fetch("footer.html");
+//       if (footerResponse2.ok) {
+//         const footerHtml = await footerResponse2.text();
+//         document.body.insertAdjacentHTML("beforeend", footerHtml);
+//       }
+//     } else {
+//       const footerHtml = await footerResponse.text();
+//       document.body.insertAdjacentHTML("beforeend", footerHtml);
+//     }
+    
+//     await loadMusicPlayer();
+//     initMenu();
+//     initDropdowns();
+//     try {
+//       setupThemeToggle();
+//     } catch (e) {}
+//     highlightCurrentPage();
+//   } catch (error) {
+//     console.error("❌ Navigation loading error:", error);
+    
+//     // Fallback navigation
+//     document.body.insertAdjacentHTML(
+//       "afterbegin",
+//       '<nav style="background: #0a0e17; padding: 1rem;">' +
+//       '<a href="/" style="color: #00fff7; margin-right: 1rem;">Home</a>' +
+//       '<a href="/pages/1.1-about.html" style="color: #00fff7; margin-right: 1rem;">About</a>' +
+//       '<a href="/pages/1.2-gallery.html" style="color: #00fff7;">Gallery</a>' +
+//       '</nav>'
+//     );
+//   }
+// }
+
 async function loadNavigation() {
   try {
     console.log("📁 Current location:", window.location.pathname);
     console.log("📁 Root path:", window.location.origin);
     
-    // Test navigation.html
-    console.log("🔍 Fetching: /navigation.html");
-    const navResponse = await fetch("/navigation.html");
+    // Your files are in /space-portal/, so use relative paths from there
+    const basePath = window.location.pathname.includes('/constellation/') 
+      ? '../'  // If in constellation folder, go up one level
+      : './';   // If in root, stay in current directory
+    
+    console.log(`🔍 Fetching: ${basePath}navigation.html`);
+    const navResponse = await fetch(`${basePath}navigation.html`);
     console.log("📊 navigation.html status:", navResponse.status);
     
     if (!navResponse.ok) {
-      console.error("❌ navigation.html not found! Status:", navResponse.status);
-      console.log("💡 Trying without leading slash...");
-      
-      // Try without leading slash
-      const navResponse2 = await fetch("navigation.html");
-      console.log("📊 navigation.html (no slash) status:", navResponse2.status);
-      
-      if (!navResponse2.ok) {
-        throw new Error("navigation.html not found with any path");
+      // Try absolute path to space-portal as fallback
+      console.log("💡 Trying absolute path...");
+      const absoluteResponse = await fetch('/space-portal/navigation.html');
+      if (absoluteResponse.ok) {
+        const navHtml = await absoluteResponse.text();
+        document.body.insertAdjacentHTML("afterbegin", navHtml);
+        console.log("✅ Navigation loaded from absolute path");
+      } else {
+        throw new Error("navigation.html not found");
       }
-      
-      const navHtml = await navResponse2.text();
-      document.body.insertAdjacentHTML("afterbegin", navHtml);
     } else {
       const navHtml = await navResponse.text();
       document.body.insertAdjacentHTML("afterbegin", navHtml);
+      console.log("✅ Navigation loaded from:", `${basePath}navigation.html`);
     }
     
-    // Test footer.html
-    console.log("🔍 Fetching: /footer.html");
-    const footerResponse = await fetch("/footer.html");
-    console.log("📊 footer.html status:", footerResponse.status);
+    // Same for footer
+    console.log(`🔍 Fetching: ${basePath}footer.html`);
+    const footerResponse = await fetch(`${basePath}footer.html`);
     
     if (!footerResponse.ok) {
-      console.error("❌ footer.html not found! Status:", footerResponse.status);
-      
-      // Try without leading slash
-      const footerResponse2 = await fetch("footer.html");
-      if (footerResponse2.ok) {
-        const footerHtml = await footerResponse2.text();
+      const absoluteFooter = await fetch('/space-portal/footer.html');
+      if (absoluteFooter.ok) {
+        const footerHtml = await absoluteFooter.text();
         document.body.insertAdjacentHTML("beforeend", footerHtml);
+        console.log("✅ Footer loaded from absolute path");
       }
     } else {
       const footerHtml = await footerResponse.text();
       document.body.insertAdjacentHTML("beforeend", footerHtml);
+      console.log("✅ Footer loaded from:", `${basePath}footer.html`);
     }
     
     await loadMusicPlayer();
     initMenu();
     initDropdowns();
-    try {
-      setupThemeToggle();
-    } catch (e) {}
     highlightCurrentPage();
+    
   } catch (error) {
     console.error("❌ Navigation loading error:", error);
     
@@ -127,9 +195,8 @@ async function loadNavigation() {
     document.body.insertAdjacentHTML(
       "afterbegin",
       '<nav style="background: #0a0e17; padding: 1rem;">' +
-      '<a href="/" style="color: #00fff7; margin-right: 1rem;">Home</a>' +
-      '<a href="/pages/1.1-about.html" style="color: #00fff7; margin-right: 1rem;">About</a>' +
-      '<a href="/pages/1.2-gallery.html" style="color: #00fff7;">Gallery</a>' +
+      '<a href="../index.html" style="color: #00fff7; margin-right: 1rem;">Home</a>' +
+      '<a href="../constellation/" style="color: #00fff7; margin-right: 1rem;">Constellations</a>' +
       '</nav>'
     );
   }
