@@ -775,11 +775,11 @@ footer {
 }
 
 body {
-  cursor: url("cursor/cursor.cur"), auto;
+  cursor: url("Icon & Logos/cursor/cursor.cur"), auto;
 }
 
 a:hover {
-  cursor: url("cursor/cursor-1.cur"), auto;
+  cursor: url("Icon & Logos/cursor/cursor-3.cur"), auto;
 }
 
 .gallery-grid {
@@ -915,7 +915,7 @@ a:hover {
 
 .gallery-item:hover {
   transform: scale(1.02);
-  cursor: url("cursor/cursor-3.cur"), auto;
+  cursor: url("Icon & Logos/cursor/cursor-1.cur"), auto;
 }
 
 @media (max-width: 768px) {
