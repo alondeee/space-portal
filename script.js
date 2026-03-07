@@ -928,3 +928,25 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("✓ Page-specific scripts loaded");
   }, 300);
 });
+
+function generateCSRFToken() {
+    const token = {
+        value: Math.random().toString(36).substring(2) + 
+               Date.now().toString(36),
+        expires: Date.now() + 3600000 
+    };
+    
+    sessionStorage.setItem('csrf_token', JSON.stringify(token));
+    return token.value;
+}
+
+function validateCSRFToken(submittedToken) {
+    const stored = JSON.parse(sessionStorage.getItem('csrf_token'));
+    
+    if (!stored) return false;
+    if (Date.now() > stored.expires) {
+        sessionStorage.removeItem('csrf_token');
+        return false;
+    }
+    return submittedToken === stored.value;
+}
