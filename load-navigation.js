@@ -2,22 +2,38 @@ document.addEventListener("DOMContentLoaded", function () {
   loadNavigation();
 });
 
+function fixNavigationLinks() {
+  const basePath = "/space-portal/"; // Your base folder
+  const links = document.querySelectorAll(
+    '.site-nav a[href^="/"]:not([href^="/space-portal/"])',
+  );
+
+  links.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href.startsWith("/") && !href.startsWith("/space-portal/")) {
+      const newHref = "/space-portal" + href;
+      link.setAttribute("href", newHref);
+      console.log("Fixed link:", href, "→", newHref);
+    }
+  });
+}
+
 async function loadNavigation() {
   try {
     console.log("📁 Current location:", window.location.pathname);
     console.log("📁 Root path:", window.location.origin);
-    
-    const basePath = window.location.pathname.includes('/constellation/') 
-      ? '../'  // If in constellation folder, go up one level
-      : './';   // If in root, stay in current directory
-    
+
+    const basePath = window.location.pathname.includes("/constellation/")
+      ? "../" // If in constellation folder, go up one level
+      : "./"; // If in root, stay in current directory
+
     console.log(`🔍 Fetching: ${basePath}navigation.html`);
     const navResponse = await fetch(`${basePath}navigation.html`);
     console.log("📊 navigation.html status:", navResponse.status);
-    
+
     if (!navResponse.ok) {
       console.log("💡 Trying absolute path...");
-      const absoluteResponse = await fetch('/space-portal/navigation.html');
+      const absoluteResponse = await fetch("/space-portal/navigation.html");
       if (absoluteResponse.ok) {
         const navHtml = await absoluteResponse.text();
         document.body.insertAdjacentHTML("afterbegin", navHtml);
@@ -30,12 +46,12 @@ async function loadNavigation() {
       document.body.insertAdjacentHTML("afterbegin", navHtml);
       console.log("✅ Navigation loaded from:", `${basePath}navigation.html`);
     }
-    
+
     console.log(`🔍 Fetching: ${basePath}footer.html`);
     const footerResponse = await fetch(`${basePath}footer.html`);
-    
+
     if (!footerResponse.ok) {
-      const absoluteFooter = await fetch('/space-portal/footer.html');
+      const absoluteFooter = await fetch("/space-portal/footer.html");
       if (absoluteFooter.ok) {
         const footerHtml = await absoluteFooter.text();
         document.body.insertAdjacentHTML("beforeend", footerHtml);
@@ -46,21 +62,22 @@ async function loadNavigation() {
       document.body.insertAdjacentHTML("beforeend", footerHtml);
       console.log("✅ Footer loaded from:", `${basePath}footer.html`);
     }
-    
+
+    // Fix the links
+    fixNavigationLinks();
     await loadMusicPlayer();
     initMenu();
     initDropdowns();
     highlightCurrentPage();
-    
   } catch (error) {
     console.error("❌ Navigation loading error:", error);
-    
+
     document.body.insertAdjacentHTML(
       "afterbegin",
       '<nav style="background: #0a0e17; padding: 1rem;">' +
-      '<a href="../index.html" style="color: #00fff7; margin-right: 1rem;">Home</a>' +
-      '<a href="../constellation/" style="color: #00fff7; margin-right: 1rem;">Constellations</a>' +
-      '</nav>'
+        '<a href="../index.html" style="color: #00fff7; margin-right: 1rem;">Home</a>' +
+        '<a href="../constellation/" style="color: #00fff7; margin-right: 1rem;">Constellations</a>' +
+        "</nav>",
     );
   }
 }
@@ -102,16 +119,16 @@ function initMenu() {
   });
 
   document.querySelectorAll(".menu-panel .site-nav a").forEach((link) => {
-    link.addEventListener("click", function (e) {
-
-    });
+    link.addEventListener("click", function (e) {});
   });
 
   document.addEventListener("click", function (e) {
-    if (menuPanel.classList.contains("active") &&
-        !menuPanel.contains(e.target) &&
-        e.target !== menuToggle &&
-        !menuToggle.contains(e.target)) {
+    if (
+      menuPanel.classList.contains("active") &&
+      !menuPanel.contains(e.target) &&
+      e.target !== menuToggle &&
+      !menuToggle.contains(e.target)
+    ) {
       closeMenuFunc();
     }
   });
@@ -374,7 +391,11 @@ async function loadMusicPlayer() {
 function monitorBrowserFullscreen() {
   function update() {
     try {
-      if (document.fullscreenElement || document.webkitIsFullScreen || document.mozFullScreen) {
+      if (
+        document.fullscreenElement ||
+        document.webkitIsFullScreen ||
+        document.mozFullScreen
+      ) {
         document.body.classList.add("in-fullscreen");
       } else {
         document.body.classList.remove("in-fullscreen");
