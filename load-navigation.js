@@ -2,145 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   loadNavigation();
 });
 
-// async function loadNavigation() {
-//   try {
-//     const response = await fetch("navigation.html");
-//     const html = await response.text();
-
-//     const tempDiv = document.createElement("div");
-//     tempDiv.innerHTML = html;
-
-//     const headerContent = tempDiv.querySelector(
-//       "header, .menu-overlay, .menu-panel",
-//     );
-//     const footerContent = tempDiv.querySelector("footer");
-
-//     if (headerContent) {
-//       document.body.insertAdjacentHTML("afterbegin", headerContent.outerHTML);
-//     }
-
-//     // Insert footer at end
-//     if (footerContent) {
-//       document.body.insertAdjacentHTML("beforeend", footerContent.outerHTML);
-//     }
-
-//     console.log("✓ Navigation HTML loaded");
-
-//     initMenu();
-//     initDropdowns();
-//     highlightCurrentPage();
-//   } catch (error) {
-//     console.error("Navigation loading error:", error);
-
-//     document.body.insertAdjacentHTML(
-//       "afterbegin",
-//       '<header style="padding: 1rem; background: #0a0e17;">' +
-//         "<h1>Space Educational Portal</h1>" +
-//         "<p>Navigation failed to load</p>" +
-//         "</header>",
-//     );
-//   }
-// }
-
-// async function loadNavigation() {
-//   try {
-//     const navResponse = await fetch("/navigation.html");
-//     const navHtml = await navResponse.text();
-//     document.body.insertAdjacentHTML("afterbegin", navHtml);
-
-//     const footerResponse = await fetch("/footer.html");
-//     const footerHtml = await footerResponse.text();
-//     document.body.insertAdjacentHTML("beforeend", footerHtml);
-
-//     await loadMusicPlayer();
-//     initMenu();
-//     initDropdowns();
-//     // Setup theme toggle if present in navigation
-//     try {
-//       setupThemeToggle();
-//     } catch (e) {}
-//     highlightCurrentPage();
-//   } catch (error) {
-//     console.error("Navigation loading error:", error);
-//   }
-// }
-
-// async function loadNavigation() {
-//   try {
-//     console.log("📁 Current location:", window.location.pathname);
-//     console.log("📁 Root path:", window.location.origin);
-    
-//     // Test navigation.html
-//     console.log("🔍 Fetching: /navigation.html");
-//     const navResponse = await fetch("/navigation.html");
-//     console.log("📊 navigation.html status:", navResponse.status);
-    
-//     if (!navResponse.ok) {
-//       console.error("❌ navigation.html not found! Status:", navResponse.status);
-//       console.log("💡 Trying without leading slash...");
-      
-//       // Try without leading slash
-//       const navResponse2 = await fetch("navigation.html");
-//       console.log("📊 navigation.html (no slash) status:", navResponse2.status);
-      
-//       if (!navResponse2.ok) {
-//         throw new Error("navigation.html not found with any path");
-//       }
-      
-//       const navHtml = await navResponse2.text();
-//       document.body.insertAdjacentHTML("afterbegin", navHtml);
-//     } else {
-//       const navHtml = await navResponse.text();
-//       document.body.insertAdjacentHTML("afterbegin", navHtml);
-//     }
-    
-//     // Test footer.html
-//     console.log("🔍 Fetching: /footer.html");
-//     const footerResponse = await fetch("/footer.html");
-//     console.log("📊 footer.html status:", footerResponse.status);
-    
-//     if (!footerResponse.ok) {
-//       console.error("❌ footer.html not found! Status:", footerResponse.status);
-      
-//       // Try without leading slash
-//       const footerResponse2 = await fetch("footer.html");
-//       if (footerResponse2.ok) {
-//         const footerHtml = await footerResponse2.text();
-//         document.body.insertAdjacentHTML("beforeend", footerHtml);
-//       }
-//     } else {
-//       const footerHtml = await footerResponse.text();
-//       document.body.insertAdjacentHTML("beforeend", footerHtml);
-//     }
-    
-//     await loadMusicPlayer();
-//     initMenu();
-//     initDropdowns();
-//     try {
-//       setupThemeToggle();
-//     } catch (e) {}
-//     highlightCurrentPage();
-//   } catch (error) {
-//     console.error("❌ Navigation loading error:", error);
-    
-//     // Fallback navigation
-//     document.body.insertAdjacentHTML(
-//       "afterbegin",
-//       '<nav style="background: #0a0e17; padding: 1rem;">' +
-//       '<a href="/" style="color: #00fff7; margin-right: 1rem;">Home</a>' +
-//       '<a href="/pages/1.1-about.html" style="color: #00fff7; margin-right: 1rem;">About</a>' +
-//       '<a href="/pages/1.2-gallery.html" style="color: #00fff7;">Gallery</a>' +
-//       '</nav>'
-//     );
-//   }
-// }
-
 async function loadNavigation() {
   try {
     console.log("📁 Current location:", window.location.pathname);
     console.log("📁 Root path:", window.location.origin);
     
-    // Your files are in /space-portal/, so use relative paths from there
     const basePath = window.location.pathname.includes('/constellation/') 
       ? '../'  // If in constellation folder, go up one level
       : './';   // If in root, stay in current directory
@@ -150,7 +16,6 @@ async function loadNavigation() {
     console.log("📊 navigation.html status:", navResponse.status);
     
     if (!navResponse.ok) {
-      // Try absolute path to space-portal as fallback
       console.log("💡 Trying absolute path...");
       const absoluteResponse = await fetch('/space-portal/navigation.html');
       if (absoluteResponse.ok) {
@@ -166,7 +31,6 @@ async function loadNavigation() {
       console.log("✅ Navigation loaded from:", `${basePath}navigation.html`);
     }
     
-    // Same for footer
     console.log(`🔍 Fetching: ${basePath}footer.html`);
     const footerResponse = await fetch(`${basePath}footer.html`);
     
@@ -191,7 +55,6 @@ async function loadNavigation() {
   } catch (error) {
     console.error("❌ Navigation loading error:", error);
     
-    // Fallback navigation
     document.body.insertAdjacentHTML(
       "afterbegin",
       '<nav style="background: #0a0e17; padding: 1rem;">' +
