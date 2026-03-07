@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fornax</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="Icon/brain.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-    <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self'; 
-                   script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-                   style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-                   img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
-                   font-src 'self' https://fonts.gstatic.com;
-                   connect-src 'self' https://api.nasa.gov;">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../Icon & Logos/stars.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
+    />
 </head>
 <body>
     <main>
@@ -88,8 +94,9 @@
         </section>
     </main>
 
-    <script src="load-navigation.js"></script>
-    <script src="script.js"></script>
+    <script src="../search-index.js"></script>
+    <script src="../load-navigation.js"></script>
+    <script src="../script.js"></script>
     <script>
         console.log("Fornax page loaded successfully!");
     </script>

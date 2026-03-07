@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Icon/brain.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="quiz-header">
+        <h3>Space Quiz</h3>
+        <div id="quiz-score">Score: 0/10</div>
+      </div>
+      <section class="quiz-section">
+        <h2>Space Quiz</h2>
+
+        <div class="quiz-question">
+          <h3>1. What is the largest planet in our solar system?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Earth</div>
+            <div class="quiz-option" data-correct="false">Saturn</div>
+            <div class="quiz-option" data-correct="true">Jupiter</div>
+            <div class="quiz-option" data-correct="false">Neptune</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>2. Which planet is known as the Red Planet?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Venus</div>
+            <div class="quiz-option" data-correct="true">Mars</div>
+            <div class="quiz-option" data-correct="false">Jupiter</div>
+            <div class="quiz-option" data-correct="false">Mercury</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>3. What is the furthest known Galaxy?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="true">MOM-z14</div>
+            <div class="quiz-option" data-correct="false">JADES-gs-z14-0</div>
+            <div class="quiz-option" data-correct="false">JADES-GS-z14-1</div>
+            <div class="quiz-option" data-correct="false">PAN-z14-1</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>4. What is the largest galaxy ever detected (Radio extent)?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Alcyoneus</div>
+            <div class="quiz-option" data-correct="true">Porphyrion</div>
+            <div class="quiz-option" data-correct="false">41+323537.6</div>
+            <div class="quiz-option" data-correct="false">Centaurus A</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>5. What is the largest galaxy ever detected (Stellar extent)?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">ESO 383-76</div>
+            <div class="quiz-option" data-correct="true">IC 1101</div>
+            <div class="quiz-option" data-correct="false">ESO 248-6</div>
+            <div class="quiz-option" data-correct="false">ESO 409-25</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>6. What is the planet that is nearest to the Sun?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Venus</div>
+            <div class="quiz-option" data-correct="true">Mercury</div>
+            <div class="quiz-option" data-correct="false">Neptune</div>
+            <div class="quiz-option" data-correct="false">Uranus</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>7. What is planet called "Greenhouse planet"?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Earth</div>
+            <div class="quiz-option" data-correct="true">Venus</div>
+            <div class="quiz-option" data-correct="false">Saturn</div>
+            <div class="quiz-option" data-correct="false">Jupiter</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>8. What is the diameter of the observable universe?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">
+              101 billion light-years
+            </div>
+            <div class="quiz-option" data-correct="true">
+              93 billion light-years
+            </div>
+            <div class="quiz-option" data-correct="false">
+              Not further than Pluto
+            </div>
+            <div class="quiz-option" data-correct="false">
+              Nothing beyond the Milky way
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>9. What Galaxy are we in?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">
+              Andromeda Galaxy
+            </div>
+            <div class="quiz-option" data-correct="true">
+              Milky way
+            </div>
+            <div class="quiz-option" data-correct="false">
+              Triangulum Galaxy
+            </div>
+            <div class="quiz-option" data-correct="false">
+              M82 or known as the Cigar Galaxy
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h3>10. What the constellation considered as one of the Zodiac?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">
+              Microscopium
+            </div>
+            <div class="quiz-option" data-correct="true">
+              Gemini 
+            </div>
+            <div class="quiz-option" data-correct="false">
+              Draco
+            </div>
+            <div class="quiz-option" data-correct="false">
+             Coma Berenices
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="load-navigation.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+      console.log("Page loaded successfully!");
+    </script>
+  </body>
+</html>
+
+<!-- const quizData = [
+            {
+                question: "What is the closest star to Earth?",
+                options: ["Proxima Centauri", "Alpha Centauri A", "Barnard's Star", "Wolf 359"],
+                correct: 0,
+                explanation: "Proxima Centauri is 4.24 light-years away, making it the closest star to our Solar System."
+            },
+            {
+                question: "How many planets are in our Solar System?",
+                options: ["8", "9", "7", "10"],
+                correct: 0,
+                explanation: "There are 8 planets in our Solar System: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune."
+            },
+            {
+                question: "What is the largest planet in our Solar System?",
+                options: ["Saturn", "Jupiter", "Neptune", "Uranus"],
+                correct: 1,
+                explanation: "Jupiter is the largest planet, with a mass 2.5 times greater than all other planets combined."
+            },
+            {
+                question: "What is a light-year?",
+                options: [
+                    "The time it takes light to travel from the Sun to Earth",
+                    "The distance light travels in one year",
+                    "The age of a star",
+                    "The brightness of a star"
+                ],
+                correct: 1,
+                explanation: "A light-year is the distance light travels in one year - about 9.46 trillion kilometers!"
+            },
+            {
+                question: "Which planet is known as the 'Red Planet'?",
+                options: ["Venus", "Jupiter", "Mars", "Saturn"],
+                correct: 2,
+                explanation: "Mars is called the Red Planet because of iron oxide (rust) on its surface."
+            },
+            {
+                question: "What is the name of our galaxy?",
+                options: ["Andromeda", "Milky Way", "Sombrero", "Whirlpool"],
+                correct: 1,
+                explanation: "Our galaxy is called the Milky Way. It contains 100-400 billion stars!"
+            },
+            {
+                question: "What causes the phases of the Moon?",
+                options: [
+                    "Earth's shadow on the Moon",
+                    "The Moon's orbit around Earth",
+                    "Clouds blocking the Moon",
+                    "The Sun's position"
+                ],
+                correct: 1,
+                explanation: "Moon phases are caused by the changing angle of the Sun as the Moon orbits Earth."
+            },
+            {
+                question: "How long does it take for light from the Sun to reach Earth?",
+                options: ["8 minutes", "8 seconds", "8 hours", "8 days"],
+                correct: 0,
+                explanation: "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth."
+            },
+            {
+                question: "What is a supernova?",
+                options: [
+                    "A new star being born",
+                    "A star exploding at the end of its life",
+                    "Two stars colliding",
+                    "A planet entering a star"
+                ],
+                correct: 1,
+                explanation: "A supernova is a powerful stellar explosion that occurs when a star reaches the end of its life."
+            },
+            {
+                question: "Which planet has the most moons?",
+                options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
+                correct: 1,
+                explanation: "Saturn has 83 confirmed moons! Jupiter has 80, but Saturn currently holds the record."
+            },
+            {
+                question: "What is a black hole?",
+                options: [
+                    "A hole in space",
+                    "A region where gravity is so strong nothing can escape",
+                    "A dark star",
+                    "An empty region of space"
+                ],
+                correct: 1,
+                explanation: "A black hole is a region of spacetime where gravity is so strong that nothing, not even light, can escape."
+            },
+            {
+                question: "What is the Great Red Spot on Jupiter?",
+                options: [
+                    "A volcano",
+                    "A giant storm",
+                    "A crater",
+                    "A desert"
+                ],
+                correct: 1,
+                explanation: "The Great Red Spot is a giant storm larger than Earth that has been raging for hundreds of years."
+            },
+            {
+                question: "What is the hottest planet in our Solar System?",
+                options: ["Mercury", "Venus", "Mars", "Jupiter"],
+                correct: 1,
+                explanation: "Venus is the hottest planet with surface temperatures reaching 475°C, due to its thick atmosphere."
+            },
+            {
+                question: "What is an exoplanet?",
+                options: [
+                    "A planet outside our Solar System",
+                    "A dead planet",
+                    "A former planet",
+                    "A planet made of exotic matter"
+                ],
+                correct: 0,
+                explanation: "An exoplanet is any planet that orbits a star outside our Solar System."
+            },
+            {
+                question: "What is the name of Earth's natural satellite?",
+                options: ["Luna", "Moon", "Titan", "Europa"],
+                correct: 1,
+                explanation: "Earth's only natural satellite is simply called 'The Moon' (or 'Luna' in Latin)."
+            },
+            {
+                question: "What is a comet made of?",
+                options: [
+                    "Rock and metal",
+                    "Ice, dust, and rock",
+                    "Gas only",
+                    "Liquid water"
+                ],
+                correct: 1,
+                explanation: "Comets are 'dirty snowballs' made of ice, dust, and small rocky particles."
+            },
+            {
+                question: "What is the Oort Cloud?",
+                options: [
+                    "A type of star",
+                    "A cloud of comets surrounding our Solar System",
+                    "A nebula",
+                    "A planet's atmosphere"
+                ],
+                correct: 1,
+                explanation: "The Oort Cloud is a theoretical cloud of icy objects that surrounds our Solar System."
+            },
+            {
+                question: "What causes a meteor shower?",
+                options: [
+                    "Stars falling",
+                    "Earth passing through comet debris",
+                    "Planets aligning",
+                    "Solar flares"
+                ],
+                correct: 1,
+                explanation: "Meteor showers occur when Earth passes through the debris trail left by comets."
+            },
+            {
+                question: "What is the largest known star?",
+                options: [
+                    "Betelgeuse",
+                    "Rigel",
+                    "UY Scuti",
+                    "Sirius"
+                ],
+                correct: 2,
+                explanation: "UY Scuti is one of the largest known stars, with a radius over 1,700 times that of the Sun!"
+            },
+            {
+                question: "What is dark matter?",
+                options: [
+                    "Matter that doesn't reflect light",
+                    "Matter that doesn't interact with light and can't be seen directly",
+                    "Black holes",
+                    "Dead stars"
+                ],
+                correct: 1,
+                explanation: "Dark matter is a hypothetical form of matter that doesn't interact with light and can only be detected through its gravitational effects."
+            }
+        ]; -->
