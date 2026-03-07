@@ -103,7 +103,7 @@ a {
 
 .logo h1 {
   font-size: 1.8rem;
-  color: lightblue;
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   font-family: "Montserrat", sans-serif;
@@ -112,12 +112,12 @@ a {
 
 .logo .tagline {
   font-size: 0.9rem;
-  color: white;
+  color: rgb(0, 0, 0);
   text-shadow: 
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
   font-family: "Montserrat", sans-serif;
   margin-top: 0.2rem;
 }
