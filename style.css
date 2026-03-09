@@ -113,9 +113,9 @@ a {
 .logo .tagline {
   font-size: 0.9rem;
   color: rgb(0, 0, 0);
-  text-shadow: 
+  text-shadow:
     -1px -1px 0 white,
-     1px -1px 0 white;
+    1px -1px 0 white;
   font-family: "Montserrat", sans-serif;
   margin-top: 0.2rem;
 }
@@ -1656,6 +1656,13 @@ body.in-fullscreen .dropdown-content::before {
 }
 
 /* ===== QUIZ STYLES ===== */
+.quiz-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .quiz-section {
   padding: 40px 5%;
   background: var(--galaxy-dark);
