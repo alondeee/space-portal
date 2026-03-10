@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal supercluster template · Laniakea · Shapley · Perseus‑Pisces · etc.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0b0f1a;
+            background-image: radial-gradient(circle at 20% 30%, #1b2c42 0%, #03050a 95%);
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            color: #e2edff;
+        }
+        .container {
+            max-width: 1300px;
+            width: 100%;
+            background: rgba(13, 22, 35, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid #3f618b;
+            border-radius: 3.2rem;
+            box-shadow: 0 30px 55px -15px #000000, 0 0 0 1px #6b8bb8 inset;
+            padding: 2.8rem 3rem;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #ffedc0;
+            text-shadow: 0 0 20px #b57c48;
+            border-bottom: 3px solid #6c8ec0;
+            padding-bottom: 0.8rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 1.5rem;
+        }
+        h1 span {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #adc8ff;
+            text-shadow: none;
+        }
+        h2 {
+            font-size: 2.4rem;
+            font-weight: 380;
+            color: #fedb9f;
+            border-left: 8px solid #c3975e;
+            padding-left: 1.4rem;
+            margin: 2.4rem 0 1.8rem 0;
+        }
+        h3 {
+            font-size: 1.9rem;
+            font-weight: 360;
+            color: #eac084;
+            margin: 2rem 0 1.2rem 0;
+        }
+        .content-section {
+            background: #1a2b40dd;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid #6082b0;
+            border-radius: 2.8rem;
+            padding: 2.2rem 2.5rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 20px 30px -12px #000000b3;
+        }
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.2rem 3.5rem;
+            align-items: flex-start;
+        }
+        .quick-fact-item {
+            background: #13324f;
+            border-radius: 60px;
+            padding: 0.7rem 2rem;
+            margin: 0.6rem 0.6rem 0.6rem 0;
+            display: inline-block;
+            font-size: 1.15rem;
+            border: 1px solid #85a7d1;
+            color: #f4fbff;
+            box-shadow: 0 4px 10px #00000040;
+        }
+        .quick-fact-item strong {
+            color: #ffd78c;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        .coordinates-block {
+            background: #0d2641;
+            border-radius: 50px;
+            padding: 1.2rem 2.2rem;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            border: 1px solid #8daad3;
+            display: inline-block;
+            font-size: 1.2rem;
+            color: #d9e8ff;
+        }
+        .image-placeholder {
+            background: #1c3453;
+            border-radius: 2.2rem;
+            padding: 4rem 1.8rem;
+            text-align: center;
+            color: #b5d0ff;
+            font-size: 1.2rem;
+            border: 2px dashed #8ea9d4;
+            box-shadow: inset 0 8px 20px #00000077;
+            min-width: 200px;
+            backdrop-filter: blur(4px);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .gallery-item p {
+            margin-top: 0.8rem;
+            color: #c4d7ff;
+            font-size: 1rem;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1d3757;
+            border-radius: 2.2rem;
+            overflow: hidden;
+            margin: 1.8rem 0;
+            border: 1px solid #6384b7;
+        }
+        .data-table th {
+            background: #244e78;
+            color: #ffeec2;
+            font-weight: 500;
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-size: 1.1rem;
+            width: 30%;
+        }
+        .data-table td {
+            padding: 1.2rem 1.5rem;
+            background: #1d3a5b;
+            color: #e2f0ff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.05rem;
+        }
+        .badge-super {
+            background: #b68b4b;
+            color: #0b1425;
+            padding: 0.4rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            display: inline-block;
+            letter-spacing: 1px;
+            border: 1px solid #ffdfaa;
+        }
+        .footer-note {
+            margin-top: 3.5rem;
+            text-align: center;
+            color: #b9d0f0;
+            background: #0e2843;
+            padding: 1.4rem;
+            border-radius: 70px;
+            border: 1px solid #779ac9;
+            font-size: 1.1rem;
+        }
+        hr {
+            border: none;
+            border-top: 3px dashed #6c89b5;
+            margin: 2.5rem 0;
+        }
+        .spec-block {
+            background: #1f3e61;
+            border-radius: 2.5rem;
+            padding: 2rem;
+            margin: 1.8rem 0;
+            border-left: 10px solid #e0a458;
+        }
+        .member-cluster-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.5rem;
+            margin-top: 1rem;
+        }
+        .member-cluster-list span {
+            background: #153b5c;
+            padding: 0.4rem 1.4rem;
+            border-radius: 40px;
+            border: 1px solid #8fb0dd;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- UNIVERSAL TITLE: supercluster name -->
+    <h1>Laniakea Supercluster <span>(incl. Virgo, Hydra‑Centaurus, Pavo‑Indus)</span></h1>
+
+    <!-- ========== SECTION 1: QUICK FACTS + COORDINATES (supercluster level) ========== -->
+    <section class="content-section">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center;">
+            <div>
+                <span class="badge-super">🌌 supercluster of galaxies</span>
+            </div>
+            <div class="quick-fact-item"><strong>richness class:</strong> 3 (very rich)</div>
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <span class="quick-fact-item"><strong>Constellation (approx. centre):</strong> Centaurus / Hydra</span>
+            <span class="quick-fact-item"><strong>Best observation season:</strong> southern autumn</span>
+            <span class="quick-fact-item"><strong>Number of member clusters:</strong> ~300–500 galaxy clusters</span>
+            <span class="quick-fact-item"><strong>Mass (total):</strong> ~10¹⁷ M☉</span>
+        </div>
+
+        <h3>🌐 Celestial reference (central region / centroid)</h3>
+        <div class="coordinates-block">
+            <strong>RA (approx):</strong> 12h 30m – 13h 00m &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Dec:</strong> -40° to -45°<br>
+            <strong style="margin-top:8px; display:inline-block;">Galactic coordinates (l, b):</strong> ~300° , +20°
+        </div>
+        <p style="margin-top:1.8rem"><strong>🔭 large‑scale structure:</strong> part of the larger Pisces–Cetus Supercluster Complex? ; defined by Tully et al. (2014) using cosmic flows.</p>
+    </section>
+
+    <!-- ========== SECTION 2: PHYSICAL CHARACTERISTICS (size, mass, redshift, dimensions) ========== -->
+    <section class="content-section">
+        <h2>📐 global properties</h2>
+
+        <table class="data-table">
+            <tr><th>Diameter (Mpc / Mly)</th><td>~160 Mpc (~520 Mly)</td></tr>
+            <tr><th>Redshift range (z)</th><td>0.00 – 0.10 (core z ~ 0.016)</td></tr>
+            <tr><th>Peculiar velocity / bulk flow</th><td>~630 km/s (Great Attractor region)</td></tr>
+            <tr><th>Mass (dynamical / virial)</th><td>(5–10)×10¹⁶ M☉ (including dark matter)</td></tr>
+            <tr><th>Luminosity (visible)</th><td>~5×10¹² L☉ (galaxy light only)</td></tr>
+            <tr><th>Dominant components</th><td>Virgo Cluster, Hydra‑Centaurus, Pavo‑Indus, Fornax‑Eridanus</td></tr>
+        </table>
+
+        <div class="spec-block">
+            <p><strong>✨ outstanding features:</strong> Laniakea defines the 'basin of attraction' – our Milky Way is part of it. The Great Attractor (Norma cluster) dominates the flow. Contains the Shapley Supercluster as a neighbouring massive structure.</p>
+            <p><strong>🔭 key research:</strong> cosmic flows, dark matter distribution, effect on CMB (dipole), relation to the Dipole Repeller.</p>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: MEMBER CLUSTERS & MAJOR COMPONENTS ========== -->
+    <section class="content-section">
+        <h2>📋 major member clusters / components</h2>
+        <div class="member-cluster-list">
+            <span>Virgo Cluster</span> <span>Hydra Cluster</span> <span>Centaurus Cluster</span> <span>Pavo‑Indus Cluster</span>
+            <span>Fornax Cluster</span> <span>Antlia Cluster</span> <span>Norma Cluster (Great Attractor)</span> <span>Abell 3521</span>
+            <span>Abell 3565</span> <span>Abell 3574</span> <span>Abell 3581</span> <span>ESO 137-006</span> <span>... plus dozens of groups</span>
+        </div>
+
+        <h3 style="margin-top:2rem;">📊 detailed table of main constituent clusters</h3>
+        <table class="data-table">
+            <tr><th>Cluster name</th><th>Distance (Mpc)</th><th>Richness</th><th>Notes</th></tr>
+            <tr><td>Virgo Cluster</td><td>16.5</td><td>~1500 galaxies</td><td>nearest massive cluster; dominates local volume</td></tr>
+            <tr><td>Hydra Cluster (Abell 1060)</td><td>58</td><td>rich</td><td>triple merger?</td></tr>
+            <tr><td>Centaurus Cluster (Abell 3526)</td><td>45</td><td>rich</td><td>cool core, multiple subclumps</td></tr>
+            <tr><td>Norma Cluster (Abell 3627)</td><td>68</td><td>very rich</td><td>core of Great Attractor, hidden by Milky Way</td></tr>
+            <tr><td>Pavo‑Indus Cluster</td><td>~70</td><td>intermediate</td><td>southern group</td></tr>
+        </table>
+        <p style="margin-top:1.5rem; font-style:italic;">(expand with more clusters as needed)</p>
+    </section>
+
+    <!-- ========== SECTION 4: HISTORY OF DISCOVERY / NAMING ========== -->
+    <section class="content-section">
+        <h2>📜 discovery & nomenclature</h2>
+        <div style="display: flex; gap: 2.5rem; flex-wrap: wrap;">
+            <div style="flex:1;">
+                <p><strong>Name origin:</strong> "Laniakea" (Hawaiian) meaning "immeasurable heaven" – proposed by R. Brent Tully et al. (2014) to define our supercluster based on velocity flows.</p>
+                <p><strong>Earlier designations:</strong> previously considered part of the Local Supercluster or Virgo–Hydra–Centaurus Supercluster.</p>
+            </div>
+            <div style="flex:1;">
+                <p><strong>Discovery / mapping:</strong> recognized gradually from redshift surveys (1980s–2010s). The Great Attractor was detected in the 1980s (Lynden‑Bell et al.). Laniakea defined using the COsmographic flow reconstruction.</p>
+                <p><strong>Key publications:</strong> Tully et al. (2014) Nature, "The Laniakea supercluster of galaxies".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5: GALLERY & VISUALISATIONS (large‑scale maps) ========== -->
+    <section class="content-section">
+        <h2>🖼️ visualisations & all‑sky maps</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="image-placeholder">[ flow map / velocity field ]</div>
+                <p>galaxy flow streamlines</p>
+            </div>
+            <div class="gallery-item">
+                <div class="image-placeholder">[ wedge diagram ]</div>
+                <p>redshift wedge (decl. slice)</p>
+            </div>
+            <div class="gallery-item">
+                <div class="image-placeholder">[ all‑sky projection ]</div>
+                <p>Laniakea boundary (Tully et al.)</p>
+            </div>
+            <div class="gallery-item">
+                <div class="image-placeholder">[ 3D model / video frame ]</div>
+                <p>supercluster skeleton</p>
+            </div>
+            <div class="gallery-item">
+                <div class="image-placeholder">[ Great Attractor ]</div>
+                <p>Norma / hidden region</p>
+            </div>
+        </div>
+        <p style="margin-top:1.5rem;">⬤ data sources: 2MRS, Cosmicflows-3, Planck, etc.</p>
+    </section>
+
+    <!-- ========== SECTION 6: NEIGHBOURING SUPERCLUSTERS / LARGER SCALE ========== -->
+    <section class="content-section">
+        <h2>🌠 surrounding large structures</h2>
+        <div class="flex-row">
+            <div style="flex:1;">
+                <p><strong>Shapley Supercluster:</strong> located behind Laniakea (z~0.05), mass ~2×10¹⁶ M☉; influences bulk flow.</p>
+                <p><strong>Perseus‑Pisces Supercluster:</strong> opposite side of the sky, part of the 'Pisces‑Cetus' complex.</p>
+            </div>
+            <div style="flex:1;">
+                <p><strong>Sculptor Void / CMB cold spot:</strong> adjacent low‑density region.</p>
+                <p><strong>Dipole Repeller:</strong> proposed push from opposite direction (Hoffman et al.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <p class="footer-note">
+        ✦ supercluster template · Laniakea / Shapley / Perseus‑Pisces / Coma / Hercules · updated [Date]
+    </p>
+
+    <!-- ========== SUPPLEMENT: ADAPTATION FOR OTHER SUPERCLUSTERS ========== -->
+    <hr>
+    <div style="background: #1b385a; border-radius: 3.5rem; padding: 1.8rem 2.5rem;">
+        <p style="font-weight:600; color:#fad893; font-size:1.3rem; margin-bottom:1rem;">📌  how to adapt for any supercluster</p>
+        <ul style="display: flex; flex-wrap: wrap; gap: 0.8rem 2.5rem; list-style: none; padding-left:0; color:#d8e7ff;">
+            <li><strong>Shapley Supercluster:</strong> core at RA 13h30, Dec -30°; rich clusters A3558, A3562; many mergers.</li>
+            <li><strong>Perseus‑Pisces:</strong> l~130°, b=-20°; contains Perseus Cluster (Abell 426), double chain.</li>
+            <li><strong>Coma Supercluster:</strong> includes Coma (A1656) and Leo (A1367) clusters, z~0.02.</li>
+            <li><strong>Hercules Supercluster:</strong> complex, several Abell clusters (A2147, A2151).</li>
+            <li><strong>Sculptor Supercluster:</strong> near south galactic pole, loose association.</li>
+            <li><strong>For any:</strong> adjust coordinates, membership table, and references to key surveys (SDSS, 6dF).</li>
+        </ul>
+        <p style="margin-top:1.5rem; background:#23507a; border-radius:3rem; padding:0.8rem 1.8rem; color:#cfdefa;">→ also include mass estimates from X‑ray (if available) and velocity dispersion.</p>
+    </div>
+    <!-- end container -->
+</div>
+</body>
+</html>
