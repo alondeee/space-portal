@@ -1918,8 +1918,8 @@ body.in-fullscreen .dropdown-content::before {
 /* Back to Top Button*/
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 90px;
+  right: 90px;
   background-color: #ffd966; 
   color: #0a0f1e;
   padding: 12px 18px;
