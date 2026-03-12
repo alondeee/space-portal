@@ -1917,28 +1917,28 @@ body.in-fullscreen .dropdown-content::before {
 
 /* Back to Top Button*/
 .back-to-top {
-  position: fixed;
-  bottom: 90px;
-  right: 90px;
-  background-color: #ffd966; 
+  position: sticky;
+  bottom: 30px;
+  float: right;
+  background-color: #ffd966;
   color: #0a0f1e;
   padding: 12px 18px;
-  border-radius: 50px; 
+  border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
   border: 2px solid #aaccff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease; 
-  z-index: 1000; 
-  opacity: 0.8; 
+  transition: all 0.3s ease;
+  z-index: 1000;
+  opacity: 0.8;
   line-height: 1;
 }
 
 .back-to-top:hover {
-  background-color: #ffc62b; 
-  transform: scale(1.05); 
-  opacity: 1; 
+  background-color: #ffc62b;
+  transform: scale(1.05);
+  opacity: 1;
   box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
   border-color: #ffd966;
 }
