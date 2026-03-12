@@ -1919,7 +1919,7 @@ body.in-fullscreen .dropdown-content::before {
 .back-to-top {
   position: sticky;
   bottom: 30px;
-  float: right;
+  float: left;
   background-color: #ffd966;
   color: #0a0f1e;
   padding: 12px 18px;
