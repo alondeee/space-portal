@@ -17,3 +17,8 @@ $orig = $.FullName -replace '\.bak$',''; Copy-Item $.FullName $orig -Force
                img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
                font-src 'self' https://fonts.gstatic.com;
                connect-src 'self' https://api.nasa.gov;">
+               
+               
+<ul> only contains <li> as direct children
+<li> can contain text AND/OR another <ul>
+< ul > is always inside an <li>, never directly inside another <ul>
