@@ -12,8 +12,8 @@ function initMusicPlayer() {
     console.log("No music player found on this page");
     return;
   }
-  audio.volume = 0.3;
-  volumeSlider.value = 0.3;
+  audio.volume = 50;
+  volumeSlider.value = 50;
   const savedVolume = localStorage.getItem("musicVolume");
   if (savedVolume) {
     audio.volume = parseFloat(savedVolume);
@@ -98,7 +98,7 @@ function initMusicPlayer() {
 
   document.addEventListener("DOMContentLoaded", function () {
     const music = document.getElementById("background-music");
-    music.volume = 0.5;
+    music.volume = 50;
 
     document.body.addEventListener(
       "click",
@@ -125,7 +125,7 @@ function initMusicPlayer() {
   });
 
   if (audio) {
-    audio.volume = 0.3;
+    audio.volume = 50;
   } else {
     console.log("Music player not loaded yet (expected)");
   }
