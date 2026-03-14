@@ -1783,7 +1783,7 @@ body.in-fullscreen .dropdown-content::before {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: rgb(51, 50, 50);
+  background: rgb(255, 255, 255);
   margin: 10px 0;
   width: 280px; /* All same width */
   height: 380px; /* All same height */
@@ -1816,6 +1816,11 @@ body.in-fullscreen .dropdown-content::before {
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  cursor: pointer;
+}
+
+.preview-box a:hover {
+  color: greenyellow;
   cursor: pointer;
 }
 
