@@ -1825,7 +1825,11 @@ body.in-fullscreen .dropdown-content::before {
 .preview-box a:hover {
   color: greenyellow;
   cursor: url("Icon & Logos/cursor/cursor-3.cur"), auto;
+}
 
+.preview-box a:visited {
+  color: mistyrose;
+  cursor: url("Icon & Logos/cursor/cursor-3.cur"), auto;
 }
 
 /* Table of Contents */
@@ -1957,4 +1961,58 @@ body.in-fullscreen .dropdown-content::before {
   color: #999;
   text-align: right;
   margin-top: 2px;
+}
+
+/* Obtel */
+
+.preview-obtel-box {
+  border: 1px solid #484848;
+  color: #00fff7;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgb(0, 0, 0);
+  margin: 10px 0;
+  width: 1080px; /* All same width */
+  height: 580px; /* All same height */
+  display: grid;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transition: transform 0.2s;
+  justify-content: flex-start;
+  cursor: url("Icon & Logos/cursor/cursor.cur"), auto;
+}
+
+.preview-obtel-image {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 4px;
+}
+
+#preview-obtel-con {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  border-radius: 4px;
+}
+
+.preview-obtel-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.preview-obtel-box a:hover {
+  color: rgb(255, 0, 225);
+  cursor: url("Icon & Logos/cursor/cursor-3.cur"), auto;
+}
+
+.preview-obtel-box a:visited {
+  color: rgb(0, 255, 255);
+  cursor: url("Icon & Logos/cursor/cursor-3.cur"), auto;
 }
