@@ -1951,3 +1951,10 @@ body.in-fullscreen .dropdown-content::before {
   box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
   border-color: #ffd966;
 }
+
+.image-credit {
+  font-size: 0.7rem;
+  color: #999;
+  text-align: right;
+  margin-top: 2px;
+}
