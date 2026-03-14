@@ -1,40 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore Main</title>
+    <title>Education Page</title>
     <link rel="stylesheet" href="../../style.css" />
-    <link rel="icon" href="../../Icon/newspaper-folded.png" />
-      <link
+    <link rel="icon" href="../../Icon/brain.png" />
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https://api.nasa.gov;
-"
+      content="default-src 'self'; 
+               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
+               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
+               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+               connect-src 'self' https://api.nasa.gov;"
     />
   </head>
   <body>
     <main>
-      <section class="hero" id="Home">
-        <div class="scroll-indicator">
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </section>
-
-      <section id="section1" class="content-section">
+      <!-- Explore Section -->
+      <section id="section3" class="content-section">
         <div class="content-row">
           <div class="content-text">
-            <h3>Under Construction</h3>
-            <p class="subtitle">Making astronomy accessible to everyone</p>
+            <h3>Explore Section</h3>
+            <p class="subtitle">Easily accessible to everyone</p>
+          </div>
+        </div>
+
+        <div id="preview-con">
+          <!-- Solar System -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Solar-System.html">
+                <h3>Solar System</h3></a
+              >
+              <p class="subtitle">Solar System</p>
+              <img
+                src="../../images/Solar System 1.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+              <p class="image-caption">Solar System</p>
+            </div>
+          </div>
+
+          <!-- Milky Way -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Milky way.html">
+                <h3>Milky way</h3></a
+              >
+              <p class="subtitle">Learn about Milky Way</p>
+              <img
+                src="../../images/Milky Way 1.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+              <p class="image-caption">Milky way</p>
+            </div>
+          </div>
+
+          <!-- Local galaxy cluster -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Local-group.html">
+                <h3>Local Galaxy Group</h3></a
+              >
+              <p class="subtitle">Local Galaxy Group</p>
+
+              <img
+                src="../../images/M31.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+              <p class="image-caption">Andromeda and friends</p>
+            </div>
+          </div>
+
+          <!-- Virgo -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Virgo.html"><h3>Virgo</h3></a>
+              <p class="subtitle">Virgo Galaxy Cluster</p>
+              <img
+                src="../../images/UGC 4459.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+              <p class="image-caption">UGC 4459</p>
+            </div>
+          </div>
+
+          <!-- Laniakea -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Laniakea.html"><h3>Laniakea</h3></a>
+              <p class="subtitle">Laniakea Galaxy Cluster</p>
+
+              <img
+                src="../../images/Abell 2744.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+              <p class="image-caption">Abell 2744</p>
+            </div>
+          </div>
+
+          <!-- Observable universe -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Observable-universe.html">
+                <h3>Observable Universe</h3></a
+              >
+              <p class="subtitle">How far can we see?</p>
+
+              <img
+                src="../../images/Observable.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+              <p class="image-caption">Observable universe</p>
+            </div>
+          </div>
+
+          <!-- Real Universe -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="../Explore-Pages/Real-universe.html">
+                <h3>Real Universe</h3></a
+              >
+              <p class="subtitle">What else can we see?</p>
+
+              <img
+                src="../../images/Universe.jpg"
+                alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -42,7 +166,6 @@
     <script src="../../search-index.js"></script>
     <script src="../../script.js"></script>
     <script src="../../load-navigation.js"></script>
-
     <script>
       console.log("Page loaded successfully!");
     </script>
