@@ -3,30 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News</title>
+    <title>Survey Catalogs - Main Page</title>
     <link rel="stylesheet" href="../../style.css" />
-    <!-- <link rel="icon" href="../../Icon/newspaper-folded.png" /> -->
+    <link rel="icon" href="../../Icon & Logos/Space-Educational-Portal-Logo.svg" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; 
-               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
-               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
-               connect-src 'self' https://api.nasa.gov;"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
     />
   </head>
   <body>
     <main>
       <section id="section1" class="content-section">
+        <!-- HYG star catalog -->
+        <div class="content-row">
+          <div class="content-text">
+            <h3>Star Catalogs</h3>
+            <h4>HYG Star Catalog v3.0</h4>
+            <p>
+              The HYG Database is a merger of the Hipparcos, Yale Bright Star,
+              and Gliese catalogs.
+            </p>
+
+            <h2>Download Options:</h2>
+            <ul>
+              <li>
+                <a href="Extra/hygdata_v41.csv" download
+                  >Full HYG star catalog Dataset (CSV, 33MB)</a
+                >
+              </li>
+              <li>
+                <a href="https://codeberg.org/astronexus/hyg" target="_blank"
+                  >Documentation Link</a
+                >
+              </li>
+            </ul>
+            <p></p>
+            <h2>About the Data:</h2>
+            <p>
+              <li>License: CC0 Public Domain</li>
+              <li>
+                Source:
+                <a href="https://github.com/astronexus/HYG-Database"
+                  >Original GitHub Repository</a
+                >
+              </li>
+              <li>Credit: David Nash (Astronexus), Hipparcos Mission</li>
+            </p>
+
+            <h3>Quick Stats:</h3>
+            <p>
+              • 119,617 stars total<br />
+              • Contains: Hipparcos ID, HD number, coordinates, magnitude,
+              distance, proper names<br />
+              • Includes 3D coordinates (x,y,z)
+            </p>
+          </div>
+
+          <div class="content-image">
+            <img src="images/hyg_pts1.jpg" alt="Description of image" />
+            <p class="image-caption">This is the data visualization</p>
+          </div>
+        </div>
+
+        <p>Coming Soon!</p>
+
+        <!-- Tycho  -->
+        <div class="content-row">
+          <div class="content-text">
+            <h3>Star Catalogs</h3>
+            <h4>HYG Star Catalog v3.0</h4>
+            <p>
+              The HYG Database is a merger of the Hipparcos, Yale Bright Star,
+              and Gliese catalogs.
+            </p>
+
+            <h2>Download Options:</h2>
+            <ul>
+              <li>
+                <a href="Extra/hygdata_v41.csv" download
+                  >Full HYG star catalog Dataset (CSV, 33MB)</a
+                >
+              </li>
+              <li>
+                <a href="https://codeberg.org/astronexus/hyg" target="_blank"
+                  >Documentation Link</a
+                >
+              </li>
+            </ul>
+            <p></p>
+            <h2>About the Data:</h2>
+            <p>
+              <li>License: CC0 Public Domain</li>
+              <li>
+                Source:
+                <a href="https://github.com/astronexus/HYG-Database"
+                  >Original GitHub Repository</a
+                >
+              </li>
+              <li>Credit: David Nash (Astronexus), Hipparcos Mission</li>
+            </p>
+
+            <h3>Quick Stats:</h3>
+            <p>
+              • 119,617 stars total<br />
+              • Contains: Hipparcos ID, HD number, coordinates, magnitude,
+              distance, proper names<br />
+              • Includes 3D coordinates (x,y,z)
+            </p>
+          </div>
+
+          <div class="content-image">
+            <img src="images/hyg_pts1.jpg" alt="Description of image" />
+            <p class="image-caption">This is the data visualization</p>
+          </div>
+        </div>
+
+        <!-- Gaia -->
+        <div class="content-row">
+          <div class="content-text">
+            <h3>Star Catalogs</h3>
+            <h4>HYG Star Catalog v3.0</h4>
+            <p>
+              The HYG Database is a merger of the Hipparcos, Yale Bright Star,
+              and Gliese catalogs.
+            </p>
+
+            <h2>Download Options:</h2>
+            <ul>
+              <li>
+                <a href="Extra/hygdata_v41.csv" download
+                  >Full HYG star catalog Dataset (CSV, 33MB)</a
+                >
+              </li>
+              <li>
+                <a href="https://codeberg.org/astronexus/hyg" target="_blank"
+                  >Documentation Link</a
+                >
+              </li>
+            </ul>
+            <p></p>
+            <h2>About the Data:</h2>
+            <p>
+              <li>License: CC0 Public Domain</li>
+              <li>
+                Source:
+                <a href="https://github.com/astronexus/HYG-Database"
+                  >Original GitHub Repository</a
+                >
+              </li>
+              <li>Credit: David Nash (Astronexus), Hipparcos Mission</li>
+            </p>
+
+            <h3>Quick Stats:</h3>
+            <p>
+              • 119,617 stars total<br />
+              • Contains: Hipparcos ID, HD number, coordinates, magnitude,
+              distance, proper names<br />
+              • Includes 3D coordinates (x,y,z)
+            </p>
+          </div>
+
+          <div class="content-image">
+            <img src="images/hyg_pts1.jpg" alt="Description of image" />
+            <p class="image-caption">This is the data visualization</p>
+          </div>
+        </div>
+
+        <!-- PHAT -->
         <div class="content-row">
           <div class="content-text">
             <h3>Star Catalogs</h3>
