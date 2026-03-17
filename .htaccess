@@ -1,0 +1,40 @@
+# /space-portal/.htaccess
+
+<IfModule mod_headers.c>
+    # SECURITY HEADERS - These actually work!
+    
+    # Prevent clickjacking (this replaces the broken frame-ancestors)
+    Header always set X-Frame-Options "DENY"
+    
+    # Proper CSP (with frame-ancestors that actually works)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.nasa.gov; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+    
+    # Other security headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # Remove server signature
+    Header always unset Server
+    Header always unset X-Powered-By
+</IfModule>
+
+# Enable HTTPS redirection (if you have SSL)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(ini|log|conf|sql|bak|sh)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Directory listing off
+Options -Indexes
