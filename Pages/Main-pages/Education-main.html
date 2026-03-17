@@ -8,20 +8,24 @@
     <link rel="icon" href="../../Icon/brain.png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; 
-               script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-               img-src 'self' data: https://apod.nasa.gov https://*.nasa.gov;
-               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
-               connect-src 'self' https://api.nasa.gov;"
+      content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.nasa.gov;
+"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
     />
   </head>
   <body>
@@ -48,8 +52,6 @@
               <img
                 src="../../images/astronomy.jpg"
                 alt="Description of image"
-                width="300"
-                height="200"
                 class="preview-image"
               />
               <p class="image-caption">
@@ -68,8 +70,6 @@
               <img
                 src="../../images/Blazars.webp"
                 alt="Description of image"
-                width="300"
-                height="200"
                 class="preview-image"
               />
               <p class="image-caption">Blazars</p>
@@ -84,8 +84,6 @@
               <img
                 src="../../Icon & Logos/meteorite.png"
                 alt="Description of image"
-                width="300"
-                height="200"
                 class="preview-image"
               />
               <p class="image-caption">Meteor Shower</p>
@@ -104,8 +102,6 @@
               <img
                 src="../../images/Radio.jpg"
                 alt="Description of image"
-                width="300"
-                height="200"
                 class="preview-image"
               />
             </div>
@@ -121,8 +117,6 @@
               <img
                 src="../../images/Added/HD 189733b.jpg"
                 alt="Description of image"
-                width="300"
-                height="200"
                 class="preview-image"
               />
               <p class="image-caption">HD 189733b</p>
