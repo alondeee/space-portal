@@ -3,23 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://api.nasa.gov;
+    base-uri 'self';
+    form-action 'self'; 
+  "
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="format-detection" content="telephone=no" />
     <title>Resources</title>
     <link rel="stylesheet" href="../../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="../../Icon & Logos/resource-allocation.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https://api.nasa.gov;
-"
     />
   </head>
   <body>
@@ -628,13 +640,30 @@
           <!-- Angkasa -->
           <div class="preview-box">
             <div class="preview-content">
-              <a href="https://www.mysa.gov.my/" target="_blank"> <h3>ANGKASA</h3></a>
-              <p class="subtitle">
-                National Space Agency (Malaysia)
-              </p>
+              <a href="https://www.mysa.gov.my/" target="_blank">
+                <h3>ANGKASA</h3></a
+              >
+              <p class="subtitle">National Space Agency (Malaysia)</p>
               <img
                 src="../../Icon & Logos/Angkasa.png"
                 alt="Description of image"
+                width="300"
+                height="200"
+                class="preview-image"
+              />
+            </div>
+          </div>
+
+          <!-- Rocket Labs -->
+          <div class="preview-box">
+            <div class="preview-content">
+              <a href="https://www.rocketlabs.com/" target="_blank">
+                <h3>Rocket Labs</h3></a
+              >
+              <p class="subtitle">A global leader in launch services</p>
+              <img
+                src="../../Icon & Logos/Rocket-Labs.png"
+                alt="Rocket Labs"
                 width="300"
                 height="200"
                 class="preview-image"
