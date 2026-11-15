@@ -1,6 +1,6 @@
 let universeData = [];
 
-fetch('../data/NGC-IC-M-essentials.json')
+fetch('/space-portal/data/NGC-IC-M-essentials.json')
   .then(response => response.json())
   .then(data => {
     universeData = data;
