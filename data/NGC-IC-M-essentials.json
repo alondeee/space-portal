@@ -214,7 +214,7 @@
     "ra": 16.620111,
     "dec": -10.569722,
     "constellation": "Ophiuchus",
-    "image": "../images/series/Sh-Series/Sh 2-27.jpg"
+    "image": "../images/series/sh/Sh 2-27.jpg"
   },
   {
     "id": "SH2-28",
@@ -28654,7 +28654,8 @@
     "ra": 1.816,
     "dec": 27.70808333333333,
     "mag": 13.4,
-    "const": "Peg"
+    "const": "Peg",
+    "image": "../images/series/ngc/n1-2.jpg"
   },
   {
     "id": "NGC9",
@@ -92065,7 +92066,7 @@
     "dec": -82.2135,
     "mag": 8.56,
     "const": "Aps",
-    "image": "../images/series/IC Series/IC 4499.jpg"
+    "image": "../images/series/ic/i4499.jpg"
   },
   {
     "id": "IC4505",
@@ -120305,7 +120306,8 @@
     "ra": 6.022333333333333,
     "dec": -72.08144444444444,
     "mag": 4.09,
-    "const": "Tuc"
+    "const": "Tuc",
+    "image": "../images/series/ngc/n104.jpg"
   },
   {
     "id": "NGC110",

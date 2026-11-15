@@ -24,12 +24,12 @@ async function loadNavigation() {
     console.log("📁 Root path:", window.location.origin);
 
     console.log(`🔍 Fetching: /components/navigation.html`);
-    const navResponse = await fetch(`/components/navigation.html`);
+    const navResponse = await fetch(`/space-portal/components/navigation.html`);
     console.log("📊 navigation.html status:", navResponse.status);
 
     if (!navResponse.ok) {
       console.log("💡 Trying absolute path...");
-      const absoluteResponse = await fetch("/space-portal/html/navigation.html");
+      const absoluteResponse = await fetch("/space-portal/components/navigation.html");
       if (absoluteResponse.ok) {
         const navHtml = await absoluteResponse.text();
         document.body.insertAdjacentHTML("afterbegin", navHtml);
@@ -40,14 +40,14 @@ async function loadNavigation() {
     } else {
       const navHtml = await navResponse.text();
       document.body.insertAdjacentHTML("afterbegin", navHtml);
-      console.log("✅ Navigation loaded from:", `/components/navigation.html`);
+      console.log("✅ Navigation loaded from:", `/space-portal/components/navigation.html`);
     }
 
     console.log(`🔍 Fetching: /components/footer.html`);
     const footerResponse = await fetch(`/components/footer.html`);
 
     if (!footerResponse.ok) {
-      const absoluteFooter = await fetch("/space-portal/html/footer.html");
+      const absoluteFooter = await fetch("/space-portal/components/footer.html");
       if (absoluteFooter.ok) {
         const footerHtml = await absoluteFooter.text();
         document.body.insertAdjacentHTML("beforeend", footerHtml);
