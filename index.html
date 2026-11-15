@@ -34,10 +34,10 @@
   <main>
     <section class="hero" id="Home">
       <div class="slideshow">
-        <div class="slide" style="background-image: url('images/categories/space missions/jwst/jwst.webp')">
+        <div class="slide" style="background-image: url('/images/categories/space missions/jwst/jwst.webp')">
         </div>
-        <div class="slide" style="background-image: url('images/categories/nebulas/lagoon nebula.jpg')"></div>
-        <div class="slide" style="background-image: url('Images/Categories/galaxy clusters/The Perseus Cluster.jpg')">
+        <div class="slide" style="background-image: url('/images/categories/nebulas/lagoon nebula.jpg')"></div>
+        <div class="slide" style="background-image: url('/images/categories/galaxy clusters/The Perseus Cluster.jpg')">
         </div>
 
         <button class="slide-arrow prev-arrow">
@@ -61,151 +61,13 @@
       </div>
     </section>
 
-    <div class="table-of-contents">
-      <h4>Page Contents</h4>
-      <ul>
-        <li><a href="#">Back to top</a></li>
-        <!-- <li><a href="#apod-section">APOD Section</a></li>
-          <li><a href="#section1">Main Pages</a></li>
-          <li><a href="#section2">Event Pages</a></li>
-          <li><a href="#section3">Explore Pages</a></li>
-          <li><a href="#section4">Missions Pages</a></li>
-          <li><a href="#section5">Discover Pages</a></li>
-          <li><a href="#section6">Fun Fact Pages</a></li>
-          <li><a href="#section7">Coming Soon!</a></li>
-          <li><a href="#section8">Coming Soon!</a></li>
-          <li><a href="#section9">Coming Soon!</a></li> -->
-      </ul>
-    </div>
-
-    <section id="apod-section" class="content-section">
-      <div class="section-header">
-        <h2><i class="fas fa-star"></i> Astronomy Picture of the Day</h2>
-        <p>
-          Discover the cosmos! Each day a different image or photograph of our
-          fascinating universe
-        </p>
-      </div>
-
-      <div class="apod-container">
-        <div class="apod-loading">
-          <div class="loading-spinner">
-            <div class="spinner-circle"></div>
-          </div>
-          <p>Loading today's cosmic wonder from NASA...</p>
-        </div>
-
-        <div class="apod-error" style="display: none">
-          <div class="error-icon">
-            <i class="fas fa-satellite-dish"></i>
-          </div>
-          <h3>Cosmic Connection Lost</h3>
-          <p>
-            Unable to retrieve today's astronomy picture. This could be due
-            to:
-          </p>
-          <ul>
-            <li>Internet connection issues</li>
-            <li>NASA API rate limit reached</li>
-            <li>Temporary server maintenance</li>
-          </ul>
-          <div class="error-actions">
-            <button id="retry-apod" class="btn-primary">
-              <i class="fas fa-sync-alt"></i> Try Again
-            </button>
-            <button id="use-demo-apod" class="btn-secondary">
-              <i class="fas fa-image"></i> Show Example
-            </button>
-          </div>
-        </div>
-
-        <div class="apod-content" style="display: none">
-          <div class="apod-media-container">
-            <div class="apod-image-wrapper">
-              <img id="apod-image" src="" alt="NASA Astronomy Picture of the Day" />
-              <div class="media-badge" id="media-badge">
-                <i class="fas fa-image"></i> Image
-              </div>
-            </div>
-            <div class="apod-video-wrapper" style="display: none">
-              <div class="video-container" id="video-container"></div>
-              <div class="media-badge">
-                <i class="fas fa-video"></i> Video
-              </div>
-            </div>
-
-            <div class="apod-controls">
-              <button id="download-apod" class="apod-btn download-btn">
-                <i class="fas fa-download"></i> Download
-              </button>
-              <button id="random-apod" class="apod-btn random-btn">
-                <i class="fas fa-random"></i> Random Day
-              </button>
-              <button id="share-apod" class="apod-btn share-btn">
-                <i class="fas fa-share-alt"></i> Share
-              </button>
-              <button id="fullscreen-apod" class="apod-btn fullscreen-btn">
-                <i class="fas fa-expand"></i> Fullscreen
-              </button>
-            </div>
-          </div>
-
-          <div class="apod-info">
-            <div class="apod-header">
-              <h3 id="apod-title">Loading...</h3>
-              <div class="apod-date">
-                <i class="fas fa-calendar-alt"></i>
-                <span id="apod-date">Today</span>
-              </div>
-            </div>
-
-            <div class="apod-explanation" id="apod-explanation">
-              <p>Loading explanation from NASA...</p>
-            </div>
-
-            <div class="apod-meta">
-              <div class="meta-item">
-                <i class="fas fa-camera"></i>
-                <span id="apod-copyright">Credit: NASA</span>
-              </div>
-              <div class="meta-item">
-                <i class="fas fa-info-circle"></i>
-                <span id="apod-media-type">Image</span>
-              </div>
-              <div class="meta-item">
-                <i class="fas fa-hdd"></i>
-                <span id="apod-hd-status">HD Available</span>
-              </div>
-            </div>
-
-            <div class="apod-actions">
-              <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" class="btn-secondary">
-                <i class="fas fa-external-link-alt"></i> Official APOD Site
-              </a>
-              <button id="toggle-explanation" class="btn-secondary">
-                <i class="fas fa-book"></i> Show More/Less
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="apod-archive">
-        <p>
-          <i class="fas fa-archive"></i>
-          Explore the
-          <a href="https://apod.nasa.gov/apod/archivepix.html" target="_blank">APOD Archive</a>
-          for images dating back to June 16, 1995
-        </p>
-      </div>
-    </section>
 
     <!-- <h6 id="top">Back to top</h6> -->
     <a href="#" class="back-to-top">Back to Top</a>
   </main>
-  <script src="js/load-navigation.js"></script>
-  <script src="js/search-index.js"></script>
-  <script src="js/script.js"></script>
+  <script src="/js/load-navigation.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
