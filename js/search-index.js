@@ -39,7 +39,7 @@ function initSearch() {
         div.className = 'search-result-item';
         const label = item.name ? `${item.id}: ${item.name}` : item.id;
         
-        div.innerHTML = `<a href="../components/details.html?id=${encodeURIComponent(item.id)}">${label} <span>(${item.type || 'Object'})</span></a>`;
+        div.innerHTML = `<a href="../space-portal/components/details.html?id=${encodeURIComponent(item.id)}">${label} <span>(${item.type || 'Object'})</span></a>`;
         resultsContainer.appendChild(div);
       });
     } else {
