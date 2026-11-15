@@ -10,14 +10,14 @@ function initMusicPlayer() {
   if (!audio) return;
 
   const playlist = [
-    "/assets/Space_Music/Daydream.mp3",
-    "/assets/Space_Music/Floating-Through-the-Cosmos.mp3",
-    "/assets/Space_Music/Into-the-Void.mp3",
-    "/assets/Space_Music/Journey-to-the-Stars.mp3",
-    "/assets/Space_Music/Napping-in-Neptune's-Orbit.mp3",
-    "/assets/Space_Music/Space-Ambience.mp3",
-    "/assets/Space_Music/The-Dawn-of-Creation.mp3",
-    "/assets/Space_Music/Unknown-Worlds.mp3",
+    "/space-portal/assets/Space_Music/Daydream.mp3",
+    "/space-portal/assets/Space_Music/Floating-Through-the-Cosmos.mp3",
+    "/space-portal/assets/Space_Music/Into-the-Void.mp3",
+    "/space-portal/assets/Space_Music/Journey-to-the-Stars.mp3",
+    "/space-portal/assets/Space_Music/Napping-in-Neptune's-Orbit.mp3",
+    "/space-portal/assets/Space_Music/Space-Ambience.mp3",
+    "/space-portal/assets/Space_Music/The-Dawn-of-Creation.mp3",
+    "/space-portal/assets/Space_Music/Unknown-Worlds.mp3",
   ];
   let currentTrackIndex =
     parseInt(localStorage.getItem("musicTrackIndex")) || 0;
