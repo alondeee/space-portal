@@ -1,170 +1,356 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="icon" href="../../Icon/brain.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https://api.nasa.gov;
-"
-    />
-  </head>
-  <body>
-    <main>
-      <div class="quiz-header">
-        <h1>Space Quiz</h1>
-        <div id="quiz-score">Score: 0/10</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="../../assets/page_icons/brain.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://api.nasa.gov;
+    base-uri 'self';
+    form-action 'self';" />
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+</head>
+
+<body>
+  <main>
+    <div class="quiz-header">
+      <h1>Space Quiz</h1>
+      <div id="quiz-score">Score: 0/10</div>
+    </div>
+    <section class="quiz-section">
+      <h2>Space Quiz</h2>
+
+      <div class="quiz-question">
+        <h3>1. What is the largest planet in our solar system?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">Earth</div>
+          <div class="quiz-option" data-correct="false">Saturn</div>
+          <div class="quiz-option" data-correct="true">Jupiter</div>
+          <div class="quiz-option" data-correct="false">Neptune</div>
+        </div>
       </div>
-      <section class="quiz-section">
-        <h2>Space Quiz</h2>
 
-        <div class="quiz-question">
-          <h3>1. What is the largest planet in our solar system?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Earth</div>
-            <div class="quiz-option" data-correct="false">Saturn</div>
-            <div class="quiz-option" data-correct="true">Jupiter</div>
-            <div class="quiz-option" data-correct="false">Neptune</div>
+      <div class="quiz-question">
+        <h3>2. Which planet is known as the Red Planet?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">Venus</div>
+          <div class="quiz-option" data-correct="true">Mars</div>
+          <div class="quiz-option" data-correct="false">Jupiter</div>
+          <div class="quiz-option" data-correct="false">Mercury</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <h3>3. What is the furthest known Galaxy?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="true">MOM-z14</div>
+          <div class="quiz-option" data-correct="false">JADES-gs-z14-0</div>
+          <div class="quiz-option" data-correct="false">JADES-GS-z14-1</div>
+          <div class="quiz-option" data-correct="false">PAN-z14-1</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <h3>4. What is the largest galaxy ever detected (Radio extent)?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">Alcyoneus</div>
+          <div class="quiz-option" data-correct="true">Porphyrion</div>
+          <div class="quiz-option" data-correct="false">41+323537.6</div>
+          <div class="quiz-option" data-correct="false">Centaurus A</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <h3>5. What is the largest galaxy ever detected (Stellar extent)?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">ESO 383-76</div>
+          <div class="quiz-option" data-correct="true">IC 1101</div>
+          <div class="quiz-option" data-correct="false">ESO 248-6</div>
+          <div class="quiz-option" data-correct="false">ESO 409-25</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <h3>6. What is the planet that is nearest to the Sun?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">Venus</div>
+          <div class="quiz-option" data-correct="true">Mercury</div>
+          <div class="quiz-option" data-correct="false">Neptune</div>
+          <div class="quiz-option" data-correct="false">Uranus</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <h3>7. What is planet called "Greenhouse planet"?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">Earth</div>
+          <div class="quiz-option" data-correct="true">Venus</div>
+          <div class="quiz-option" data-correct="false">Saturn</div>
+          <div class="quiz-option" data-correct="false">Jupiter</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <h3>8. What is the diameter of the observable universe?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            101 billion light-years
+          </div>
+          <div class="quiz-option" data-correct="true">
+            93 billion light-years
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Not further than Pluto
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Nothing beyond the Milky way
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>2. Which planet is known as the Red Planet?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Venus</div>
-            <div class="quiz-option" data-correct="true">Mars</div>
-            <div class="quiz-option" data-correct="false">Jupiter</div>
-            <div class="quiz-option" data-correct="false">Mercury</div>
+      <div class="quiz-question">
+        <h3>9. What Galaxy are we in?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Andromeda Galaxy
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Milky way
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Triangulum Galaxy
+          </div>
+          <div class="quiz-option" data-correct="false">
+            M82 or known as the Cigar Galaxy
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>3. What is the furthest known Galaxy?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="true">MOM-z14</div>
-            <div class="quiz-option" data-correct="false">JADES-gs-z14-0</div>
-            <div class="quiz-option" data-correct="false">JADES-GS-z14-1</div>
-            <div class="quiz-option" data-correct="false">PAN-z14-1</div>
+      <div class="quiz-question">
+        <h3>10. Which constellation is considered as one of the Zodiacs?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Microscopium
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Gemini
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Draco
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Coma Berenices
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>4. What is the largest galaxy ever detected (Radio extent)?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Alcyoneus</div>
-            <div class="quiz-option" data-correct="true">Porphyrion</div>
-            <div class="quiz-option" data-correct="false">41+323537.6</div>
-            <div class="quiz-option" data-correct="false">Centaurus A</div>
+      <div class="quiz-question">
+        <h3>11. What is the brightest star in the sky?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="true">
+            Our Sun
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Sirius
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Polaris
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Spica
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>5. What is the largest galaxy ever detected (Stellar extent)?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">ESO 383-76</div>
-            <div class="quiz-option" data-correct="true">IC 1101</div>
-            <div class="quiz-option" data-correct="false">ESO 248-6</div>
-            <div class="quiz-option" data-correct="false">ESO 409-25</div>
+      <div class="quiz-question">
+        <h3>12. What is the most southern star in the southern hemisphere?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="true">
+            Sigma Octantis
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Kappa Piscium
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Psi¹ Aquarii
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Fomalhaut
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>6. What is the planet that is nearest to the Sun?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Venus</div>
-            <div class="quiz-option" data-correct="true">Mercury</div>
-            <div class="quiz-option" data-correct="false">Neptune</div>
-            <div class="quiz-option" data-correct="false">Uranus</div>
+      <div class="quiz-question">
+        <h3>13. Which constellation is <strong>not named by Ptolemy?</strong></h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Argo Navis
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Corona Australis
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Coma Berenices
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Corona Borealis
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>7. What is planet called "Greenhouse planet"?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Earth</div>
-            <div class="quiz-option" data-correct="true">Venus</div>
-            <div class="quiz-option" data-correct="false">Saturn</div>
-            <div class="quiz-option" data-correct="false">Jupiter</div>
+      <div class="quiz-question">
+        <h3>14. Which constellation is known as "Table Mountain" by Lacaille?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Antlia
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Mensa
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Octans
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Pictor
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>8. What is the diameter of the observable universe?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">
-              101 billion light-years
-            </div>
-            <div class="quiz-option" data-correct="true">
-              93 billion light-years
-            </div>
-            <div class="quiz-option" data-correct="false">
-              Not further than Pluto
-            </div>
-            <div class="quiz-option" data-correct="false">
-              Nothing beyond the Milky way
-            </div>
+      <div class="quiz-question">
+        <h3>15. Which constellation is the dimmest in the entire night sky?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="true">
+            Mensa
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Gemini
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Draco
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Coma Berenices
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>9. What Galaxy are we in?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">
-              Andromeda Galaxy
-            </div>
-            <div class="quiz-option" data-correct="true">
-              Milky way
-            </div>
-            <div class="quiz-option" data-correct="false">
-              Triangulum Galaxy
-            </div>
-            <div class="quiz-option" data-correct="false">
-              M82 or known as the Cigar Galaxy
-            </div>
+      <div class="quiz-question">
+        <h3>16. What is the accurate speed of light (m/s)?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="true">
+            299,792,458 meters
+          </div>
+          <div class="quiz-option" data-correct="false">
+            343 meters
+          </div>
+          <div class="quiz-option" data-correct="false">
+            299,792,485 meters
+          </div>
+          <div class="quiz-option" data-correct="false">
+            299,792,486 meters
           </div>
         </div>
+      </div>
 
-        <div class="quiz-question">
-          <h3>10. What the constellation considered as one of the Zodiac?</h3>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">
-              Microscopium
-            </div>
-            <div class="quiz-option" data-correct="true">
-              Gemini 
-            </div>
-            <div class="quiz-option" data-correct="false">
-              Draco
-            </div>
-            <div class="quiz-option" data-correct="false">
-             Coma Berenices
-            </div>
+      <div class="quiz-question">
+        <h3>17. Who discovered the General Law of Relativity?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Johannes Kepler
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Albert Einstein
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Nikola Tesla
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Thomas Edison
           </div>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <script src="../../load-navigation.js"></script>
+      <div class="quiz-question">
+        <h3>18. Which year was the discovery of Cosmic Microwave Background Radiation?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            1966
+          </div>
+          <div class="quiz-option" data-correct="true">
+            1964
+          </div>
+          <div class="quiz-option" data-correct="false">
+            1998
+          </div>
+          <div class="quiz-option" data-correct="false">
+            2026
+          </div>
+        </div>
+      </div>
 
-    <script src="../../script.js"></script>
+      <div class="quiz-question">
+        <h3>19. Who are the crew members of the Apollo 11 mission?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Reid Wiseman, Victor Glover, Christina Koch, Jeremy Hansen
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Neil Armstrong, Buzz Aldrin, Michael Collins
+          </div>
+          <div class="quiz-option" data-correct="false">
+            James A. Lovell Jr., John "Jack" L. Swigert Jr., Fred W. Haise Jr
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Alan B. Shepard Jr., Stuart A. Roosa, Edgar D. Mitchell
+          </div>
+        </div>
+      </div>
 
-    <script>
-      console.log("Page loaded successfully!");
-    </script>
-  </body>
+      <div class="quiz-question">
+        <h3>20. In the Artemis II mission, who is from Canada Space Agency (CSA)?</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-correct="false">
+            Reid Wiseman
+          </div>
+          <div class="quiz-option" data-correct="true">
+            Jeremy Hansen
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Victor Glover
+          </div>
+          <div class="quiz-option" data-correct="false">
+            Christina Koch
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../../js/load-navigation.js"></script>
+  <script src="../../js/search-index.js"></script>
+  <script src="../../js/script.js"></script>
+
+  <script>
+    console.log("Page loaded successfully!");
+  </script>
+</body>
+
 </html>
 
 <!-- const quizData = [

@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
@@ -13,104 +13,59 @@
     img-src 'self' data: https:;
     connect-src 'self' https://api.nasa.gov;
     base-uri 'self';
-    form-action 'self'; 
-  "
-    />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta
-      http-equiv="Permissions-Policy"
-      content="geolocation=(), microphone=(), camera=()"
-    />
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-    <meta name="format-detection" content="telephone=no" />
-    <title>Space Educational Portal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      href="Icon & Logos/Space Educational Portal Transparent Background.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <main>
-      <section class="hero" id="Home">
-        <div class="slideshow">
-          <div
-            class="slide active"
-            style="background-image: url(&quot;images/Starry Sky 1.webp&quot;)"
-          ></div>
-          <div
-            class="slide"
-            style="
-              background-image: url(&quot;images/Euclid's Pictures.jpg&quot;);
-            "
-          ></div>
-          <div
-            class="slide"
-            style="background-image: url(&quot;images/JWST.jpg&quot;)"
-          ></div>
-          <div
-            class="slide"
-            style="background-image: url(&quot;images/CTB 1.jpg&quot;)"
-          ></div>
-          <div
-            class="slide"
-            style="
-              background-image: url(&quot;images/Pillar of Creation (Eagle Nebula).jpg&quot;);
-            "
-          ></div>
-          <div
-            class="slide"
-            style="background-image: url(&quot;images/Lagoon Nebula.jpg&quot;)"
-          ></div>
-          <div
-            class="slide"
-            style="
-              background-image: url(&quot;images/Westerlund 2 Star Cluster.png&quot;);
-            "
-          ></div>
-          <div
-            class="slide"
-            style="background-image: url(&quot;images/Curiosity.jpg&quot;)"
-          ></div>
+    form-action 'self';" />
 
-          <button class="slide-arrow prev-arrow">
-            <i class="fas fa-chevron-circle-left"></i>
-          </button>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
 
-          <button class="slide-arrow next-arrow">
-            <i class="fas fa-chevron-circle-right"></i>
-          </button>
+  <title>Space Educational Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/space-portal-logo/Space-Educational-Portal-Transparent-Background.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-          <div class="slide-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
-            <span class="dot" data-slide="4"></span>
-            <span class="dot" data-slide="5"></span>
-            <span class="dot" data-slide="6"></span>
-            <span class="dot" data-slide="7"></span>
-          </div>
+</head>
+
+<body>
+  <main>
+    <section class="hero" id="Home">
+      <div class="slideshow">
+        <div class="slide" style="background-image: url('images/categories/space missions/jwst/jwst.webp')">
+        </div>
+        <div class="slide" style="background-image: url('images/categories/nebulas/lagoon nebula.jpg')"></div>
+        <div class="slide" style="background-image: url('Images/Categories/galaxy clusters/The Perseus Cluster.jpg')">
         </div>
 
-        <div class="hero-content">
-          <h2>Understanding the Cosmos</h2>
-          <p class="subtitle">Cosmic mysteries explained.</p>
-        </div>
-      </section>
+        <button class="slide-arrow prev-arrow">
+          <i class="fas fa-chevron-circle-left"></i>
+        </button>
 
-      <div class="table-of-contents">
-        <h4>Page Contents</h4>
-        <ul>
-          <li><a href="#">Back to top</a></li>
-          <li><a href="#apod-section">APOD Section</a></li>
+        <button class="slide-arrow next-arrow">
+          <i class="fas fa-chevron-circle-right"></i>
+        </button>
+
+        <div class="slide-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h2>Understanding the Cosmos</h2>
+        <p class="subtitle">Cosmic mysteries explained.</p>
+      </div>
+    </section>
+
+    <div class="table-of-contents">
+      <h4>Page Contents</h4>
+      <ul>
+        <li><a href="#">Back to top</a></li>
+        <!-- <li><a href="#apod-section">APOD Section</a></li>
           <li><a href="#section1">Main Pages</a></li>
           <li><a href="#section2">Event Pages</a></li>
           <li><a href="#section3">Explore Pages</a></li>
@@ -119,1164 +74,138 @@
           <li><a href="#section6">Fun Fact Pages</a></li>
           <li><a href="#section7">Coming Soon!</a></li>
           <li><a href="#section8">Coming Soon!</a></li>
-          <li><a href="#section9">Coming Soon!</a></li>
-        </ul>
+          <li><a href="#section9">Coming Soon!</a></li> -->
+      </ul>
+    </div>
+
+    <section id="apod-section" class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-star"></i> Astronomy Picture of the Day</h2>
+        <p>
+          Discover the cosmos! Each day a different image or photograph of our
+          fascinating universe
+        </p>
       </div>
 
-      <section id="apod-section" class="content-section">
-        <div class="section-header">
-          <h2><i class="fas fa-star"></i> Astronomy Picture of the Day</h2>
+      <div class="apod-container">
+        <div class="apod-loading">
+          <div class="loading-spinner">
+            <div class="spinner-circle"></div>
+          </div>
+          <p>Loading today's cosmic wonder from NASA...</p>
+        </div>
+
+        <div class="apod-error" style="display: none">
+          <div class="error-icon">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
+          <h3>Cosmic Connection Lost</h3>
           <p>
-            Discover the cosmos! Each day a different image or photograph of our
-            fascinating universe
+            Unable to retrieve today's astronomy picture. This could be due
+            to:
           </p>
+          <ul>
+            <li>Internet connection issues</li>
+            <li>NASA API rate limit reached</li>
+            <li>Temporary server maintenance</li>
+          </ul>
+          <div class="error-actions">
+            <button id="retry-apod" class="btn-primary">
+              <i class="fas fa-sync-alt"></i> Try Again
+            </button>
+            <button id="use-demo-apod" class="btn-secondary">
+              <i class="fas fa-image"></i> Show Example
+            </button>
+          </div>
         </div>
 
-        <div class="apod-container">
-          <div class="apod-loading">
-            <div class="loading-spinner">
-              <div class="spinner-circle"></div>
+        <div class="apod-content" style="display: none">
+          <div class="apod-media-container">
+            <div class="apod-image-wrapper">
+              <img id="apod-image" src="" alt="NASA Astronomy Picture of the Day" />
+              <div class="media-badge" id="media-badge">
+                <i class="fas fa-image"></i> Image
+              </div>
             </div>
-            <p>Loading today's cosmic wonder from NASA...</p>
-          </div>
+            <div class="apod-video-wrapper" style="display: none">
+              <div class="video-container" id="video-container"></div>
+              <div class="media-badge">
+                <i class="fas fa-video"></i> Video
+              </div>
+            </div>
 
-          <div class="apod-error" style="display: none">
-            <div class="error-icon">
-              <i class="fas fa-satellite-dish"></i>
-            </div>
-            <h3>Cosmic Connection Lost</h3>
-            <p>
-              Unable to retrieve today's astronomy picture. This could be due
-              to:
-            </p>
-            <ul>
-              <li>Internet connection issues</li>
-              <li>NASA API rate limit reached</li>
-              <li>Temporary server maintenance</li>
-            </ul>
-            <div class="error-actions">
-              <button id="retry-apod" class="btn-primary">
-                <i class="fas fa-sync-alt"></i> Try Again
+            <div class="apod-controls">
+              <button id="download-apod" class="apod-btn download-btn">
+                <i class="fas fa-download"></i> Download
               </button>
-              <button id="use-demo-apod" class="btn-secondary">
-                <i class="fas fa-image"></i> Show Example
+              <button id="random-apod" class="apod-btn random-btn">
+                <i class="fas fa-random"></i> Random Day
+              </button>
+              <button id="share-apod" class="apod-btn share-btn">
+                <i class="fas fa-share-alt"></i> Share
+              </button>
+              <button id="fullscreen-apod" class="apod-btn fullscreen-btn">
+                <i class="fas fa-expand"></i> Fullscreen
               </button>
             </div>
           </div>
 
-          <div class="apod-content" style="display: none">
-            <div class="apod-media-container">
-              <div class="apod-image-wrapper">
-                <img
-                  id="apod-image"
-                  src=""
-                  alt="NASA Astronomy Picture of the Day"
-                />
-                <div class="media-badge" id="media-badge">
-                  <i class="fas fa-image"></i> Image
-                </div>
-              </div>
-              <div class="apod-video-wrapper" style="display: none">
-                <div class="video-container" id="video-container"></div>
-                <div class="media-badge">
-                  <i class="fas fa-video"></i> Video
-                </div>
-              </div>
-
-              <div class="apod-controls">
-                <button id="download-apod" class="apod-btn download-btn">
-                  <i class="fas fa-download"></i> Download
-                </button>
-                <button id="random-apod" class="apod-btn random-btn">
-                  <i class="fas fa-random"></i> Random Day
-                </button>
-                <button id="share-apod" class="apod-btn share-btn">
-                  <i class="fas fa-share-alt"></i> Share
-                </button>
-                <button id="fullscreen-apod" class="apod-btn fullscreen-btn">
-                  <i class="fas fa-expand"></i> Fullscreen
-                </button>
+          <div class="apod-info">
+            <div class="apod-header">
+              <h3 id="apod-title">Loading...</h3>
+              <div class="apod-date">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="apod-date">Today</span>
               </div>
             </div>
 
-            <div class="apod-info">
-              <div class="apod-header">
-                <h3 id="apod-title">Loading...</h3>
-                <div class="apod-date">
-                  <i class="fas fa-calendar-alt"></i>
-                  <span id="apod-date">Today</span>
-                </div>
-              </div>
+            <div class="apod-explanation" id="apod-explanation">
+              <p>Loading explanation from NASA...</p>
+            </div>
 
-              <div class="apod-explanation" id="apod-explanation">
-                <p>Loading explanation from NASA...</p>
+            <div class="apod-meta">
+              <div class="meta-item">
+                <i class="fas fa-camera"></i>
+                <span id="apod-copyright">Credit: NASA</span>
               </div>
-
-              <div class="apod-meta">
-                <div class="meta-item">
-                  <i class="fas fa-camera"></i>
-                  <span id="apod-copyright">Credit: NASA</span>
-                </div>
-                <div class="meta-item">
-                  <i class="fas fa-info-circle"></i>
-                  <span id="apod-media-type">Image</span>
-                </div>
-                <div class="meta-item">
-                  <i class="fas fa-hdd"></i>
-                  <span id="apod-hd-status">HD Available</span>
-                </div>
+              <div class="meta-item">
+                <i class="fas fa-info-circle"></i>
+                <span id="apod-media-type">Image</span>
               </div>
-
-              <div class="apod-actions">
-                <a
-                  href="https://apod.nasa.gov/apod/astropix.html"
-                  target="_blank"
-                  class="btn-secondary"
-                >
-                  <i class="fas fa-external-link-alt"></i> Official APOD Site
-                </a>
-                <button id="toggle-explanation" class="btn-secondary">
-                  <i class="fas fa-book"></i> Show More/Less
-                </button>
+              <div class="meta-item">
+                <i class="fas fa-hdd"></i>
+                <span id="apod-hd-status">HD Available</span>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="apod-archive">
-          <p>
-            <i class="fas fa-archive"></i>
-            Explore the
-            <a href="https://apod.nasa.gov/apod/archivepix.html" target="_blank"
-              >APOD Archive</a
-            >
-            for images dating back to June 16, 1995
-          </p>
-        </div>
-      </section>
-
-      <!-- Main Pages -->
-      <section id="section1" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Main Pages</h3>
-            <p class="subtitle">
-              Easily accessible to everyone. Take a look at our pages
-            </p>
-          </div>
-        </div>
-
-        <div id="preview-con">
-          <!-- About Us -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/about.html"> <h3>About US</h3></a>
-              <p class="subtitle">Learn about Us</p>
-            </div>
-          </div>
-
-          <!-- Gallery -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="gallery.html"> <h3>Gallery</h3></a>
-              <p class="subtitle">See amazing images</p>
-            </div>
-          </div>
-
-          <!-- Resources -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/resources.html"> <h3>Resources</h3></a>
-              <p class="subtitle">Where we get our info</p>
-            </div>
-          </div>
-
-          <!-- News  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/news.html"> <h3>News</h3></a>
-              <p class="subtitle">Know what is happening currently</p>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/Education-main.html"
-                ><h3>Education Page</h3></a
-              >
-              <p class="subtitle">Learn what is it?</p>
-            </div>
-          </div>
-
-          <!-- Constellation -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/Constellation.html">
-                <h3>Constellations</h3></a
-              >
-              <p class="subtitle">
-                Learn about the figures that are recognized by our ancestors
-              </p>
-            </div>
-          </div>
-
-          <!-- Quiz -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/quiz.html"> <h3>Quiz</h3></a>
-              <p class="subtitle">Try out our Quizes!</p>
-            </div>
-          </div>
-
-          <!-- Contact -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/contact.html"> <h3>Contact</h3></a>
-              <p class="subtitle">Contact us</p>
-            </div>
-          </div>
-
-          <!-- Catalog visual-->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/catalog-1.html">
-                <h3>Visual observation catalogs</h3></a
-              >
-              <p class="subtitle">Star Catalogs & Galaxy Catalogs</p>
-            </div>
-          </div>
-
-          <!-- Catalog data-->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Main-pages/catalog-d.html">
-                <h3>Survey catalogs</h3></a
-              >
-              <p class="subtitle">Star Catalogs & Galaxy Catalogs's Data</p>
+            <div class="apod-actions">
+              <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" class="btn-secondary">
+                <i class="fas fa-external-link-alt"></i> Official APOD Site
+              </a>
+              <button id="toggle-explanation" class="btn-secondary">
+                <i class="fas fa-book"></i> Show More/Less
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div class="apod-archive">
+        <p>
+          <i class="fas fa-archive"></i>
+          Explore the
+          <a href="https://apod.nasa.gov/apod/archivepix.html" target="_blank">APOD Archive</a>
+          for images dating back to June 16, 1995
+        </p>
+      </div>
+    </section>
+
+    <!-- <h6 id="top">Back to top</h6> -->
+    <a href="#" class="back-to-top">Back to Top</a>
+  </main>
+  <script src="js/load-navigation.js"></script>
+  <script src="js/search-index.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
-      <!-- Event section -->
-      <section id="section2" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Event Section</h3>
-            <p class="subtitle">Easily accessible to everyone</p>
-          </div>
-        </div>
-
-        <div id="preview-con">
-          <!-- Solar Eclipse -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Event-pages/solar-eclipse.html">
-                <h3>Solar Eclipse</h3></a
-              >
-              <p class="subtitle">Learn about Solar Eclipse</p>
-              <img
-                src="images/Solar Eclipse 1.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Solar Eclipse</p>
-            </div>
-          </div>
-
-          <!-- Lunar Eclipse -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Event-pages/lunar-eclipse.html">
-                <h3>Lunar Eclipse</h3></a
-              >
-              <p class="subtitle">Learn about Lunar Eclipse</p>
-              <img
-                src="images/Lunar Eclipse 1.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Lunar Eclipse</p>
-            </div>
-          </div>
-
-          <!-- Planetary Alignment -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Event-pages/planetary-alignment.html">
-                <h3>Planetary Alignment</h3></a
-              >
-              <p class="subtitle">What is Planetary Alignment?</p>
-
-              <img
-                src="images/Planetary alignment.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Planetary Alignment</p>
-            </div>
-          </div>
-
-          <!-- ISS -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Event-pages/ISS-lookout.html"> <h3>ISS</h3></a>
-              <p class="subtitle">What is ISS? Where is it now?</p>
-
-              <img
-                src="images/ISS.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">International Space Station</p>
-            </div>
-          </div>
-
-          <!-- Meteor Shower -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Event-pages/meteor-shower.html">
-                <h3>Meteor Showers</h3></a
-              >
-              <p class="subtitle">Where can we get to see Meteor Showers?</p>
-              <img
-                src="images/Meteor shower 2.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Meteor Showers</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Explore Section -->
-      <section id="section3" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Explore Section</h3>
-            <p class="subtitle">Easily accessible to everyone</p>
-          </div>
-        </div>
-
-        <div id="preview-con">
-          <!-- Solar System -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Solar-System.html">
-                <h3>Solar System</h3></a
-              >
-              <p class="subtitle">Solar System</p>
-              <img
-                src="images/Solar System 1.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Solar System</p>
-            </div>
-          </div>
-
-          <!-- Milky Way -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Milky way.html">
-                <h3>Milky way</h3></a
-              >
-              <p class="subtitle">Learn about Milky Way</p>
-              <img
-                src="images/Milky Way 1.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Milky way</p>
-            </div>
-          </div>
-
-          <!-- Local galaxy cluster -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Local-group.html">
-                <h3>Local Galaxy Group</h3></a
-              >
-              <p class="subtitle">Local Galaxy Group</p>
-
-              <img
-                src="images/M31.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Andromeda and friends</p>
-            </div>
-          </div>
-
-          <!-- Virgo -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Virgo.html"><h3>Virgo</h3></a>
-              <p class="subtitle">Virgo Galaxy Cluster</p>
-              <img
-                src="images/UGC 4459.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">UGC 4459</p>
-            </div>
-          </div>
-
-          <!-- Laniakea -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Laniakea.html"><h3>Laniakea</h3></a>
-              <p class="subtitle">Laniakea Galaxy Cluster</p>
-
-              <img
-                src="images/Abell 2744.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Abell 2744</p>
-            </div>
-          </div>
-
-          <!-- Observable universe -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Observable-universe.html">
-                <h3>Observable Universe</h3></a
-              >
-              <p class="subtitle">How far can we see?</p>
-
-              <img
-                src="images/Observable.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Real Universe -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Explore-Pages/Real-universe.html">
-                <h3>Real Universe</h3></a
-              >
-              <p class="subtitle">What else can we see?</p>
-
-              <img
-                src="images/Universe.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Missions Section -->
-      <section id="section4" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Missions Section</h3>
-            <p class="subtitle">Easily accessible to everyone</p>
-          </div>
-        </div>
-
-        <div id="preview-con">
-          <!-- Telescopes -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Missions-Pages/telescopes.html">
-                <h3>Telescopes</h3></a
-              >
-              <p class="subtitle">Learn about the Great Telescopes</p>
-              <img
-                src="images/JWST 1.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">JWST</p>
-            </div>
-          </div>
-
-          <!-- Observatories -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Missions-Pages/observatories.html"
-                ><h3>Observatories</h3></a
-              >
-              <p class="subtitle">Learn about the Great Observatories</p>
-              <img
-                src="images/Observatory.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Observatories</p>
-            </div>
-          </div>
-
-          <!-- Rovers -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Missions-Pages/rovers.html">
-                <h3>Rovers, Planet Orbiters & Landers</h3></a
-              >
-              <p class="subtitle"></p>
-
-              <img
-                src="images/Rover.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Rovers</p>
-            </div>
-          </div>
-
-          <!-- Satellites -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Missions-Pages/satellites.html">
-                <h3>Satellites</h3></a
-              >
-              <p class="subtitle">Learn about how GPS, Internet works</p>
-
-              <img
-                src="images/Satellite.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Satellites</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Discover Section -->
-      <section id="section5" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Discover Section</h3>
-            <p class="subtitle">Easily accessible to everyone</p>
-          </div>
-        </div>
-
-        <div id="preview-con">
-          <!-- Star -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Stars.html"> <h3>Stars</h3></a>
-              <p class="subtitle">Learn about Stars in the sky</p>
-              <img
-                src="images/Star.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Our Sun</p>
-            </div>
-          </div>
-
-          <!-- Exoplanets -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Exoplanets.html">
-                <h3>Exoplanets</h3></a
-              >
-              <p class="subtitle">Planets that could host life</p>
-              <img
-                src="images/Exoplanets.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Clusters -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Cluster.html">
-                <h3>Clusters: Galaxy & Star Clusters, What are they?</h3></a
-              >
-              <img
-                src="images/Hickson Compact Group 92.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">HCG 92</p>
-            </div>
-          </div>
-
-          <!-- Galaxies -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Galaxies.html">
-                <h3>Galaxies</h3></a
-              >
-              <p class="subtitle">What are Galaxies?</p>
-
-              <img
-                src="images/Galaxies.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Blackholes -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Blackholes.html">
-                <h3>Blackholes</h3></a
-              >
-              <p class="subtitle">What is a blackhole?</p>
-
-              <img
-                src="images/Blazars.webp"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Blazars-Quasars-->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Blazars-Quasars.html">
-                <h3>Blazars & Quasar</h3></a
-              >
-              <p class="subtitle">What are they?</p>
-
-              <img
-                src="images/Quasars.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Nebulas -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Nebulas.html"> <h3>Nebulas</h3></a>
-              <p class="subtitle">What are Nebulas?</p>
-
-              <img
-                src="images/Lagoon Nebula.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Lagoon Nebula</p>
-            </div>
-          </div>
-
-          <!-- Neutron Stars -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Neutron-stars.html">
-                <h3>Neutron Stars</h3></a
-              >
-              <p class="subtitle">What is a Neutron Star?</p>
-
-              <img
-                src="images/Neutron-Star.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Neutron Star</p>
-            </div>
-          </div>
-
-          <!-- Superclusters -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Supercluster-Superstructures.html">
-                <h3>Superclusters and Superstructures</h3></a
-              >
-              <p class="subtitle">What are the large cosmic Structures?</p>
-
-              <img
-                src="images/Superclusters.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Walls -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Discover-Pages/Walls-filaments.html">
-                <h3>Walls, Voids and filaments</h3></a
-              >
-              <p class="subtitle">
-                What are the super large cosmic Structures?
-              </p>
-
-              <img
-                src="images/Walls.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Fun Facts Section -->
-      <section id="section6" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Fun Facts Section</h3>
-            <p class="subtitle">Learn about Facts about every thing in space</p>
-          </div>
-        </div>
-        <div id="preview-con">
-          <!-- Centauri System -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Fun-Fact-Pages/Centauri-system.html"
-                ><h3>Centauri System</h3></a
-              >
-              <p class="subtitle">The nearest Star system to Earth</p>
-              <img
-                src="images/Milky Way 2.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-              <p class="image-caption">Milky Way</p>
-            </div>
-          </div>
-
-          <!-- Planets -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Fun-Fact-Pages/Planets.html"> <h3>Planets</h3></a>
-              <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-
-          <!-- Star Systems -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <a href="Pages/Fun-Fact-Pages/Star-systems.html">
-                <h3>Star Systems</h3></a
-              >
-              <p class="subtitle">Star Systems in our Galaxy</p>
-
-              <img
-                src="images/Milky Way 6.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Future Section -->
-      <section id="section7" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Coming Soon!</h3>
-            <p class="subtitle">
-              We are still developing to make our understanding of the universe
-              better!
-            </p>
-          </div>
-        </div>
-        <div id="preview-con">
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/.html" ></a -->
-              <h3>Coming Soon</h3>
-
-              <!-- <p class="subtitle"></p> -->
-              <!-- <img
-                src="images/Milky Way 2.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-              <!-- <p class="image-caption"></p> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="section8" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Coming Soon!</h3>
-            <p class="subtitle">
-              We are still developing to make our understanding of the universe
-              better!
-            </p>
-          </div>
-        </div>
-        <div id="preview-con">
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/.html" ></a -->
-              <h3>Coming Soon</h3>
-
-              <!-- <p class="subtitle"></p> -->
-              <!-- <img
-                src="images/Milky Way 2.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-              <!-- <p class="image-caption"></p> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="section9" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Coming Soon!</h3>
-            <p class="subtitle">
-              We are still developing to make our understanding of the universe
-              better!
-            </p>
-          </div>
-        </div>
-        <div id="preview-con">
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/.html" ></a -->
-              <h3>Coming Soon</h3>
-
-              <!-- <p class="subtitle"></p> -->
-              <!-- <img
-                src="images/Milky Way 2.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-              <!-- <p class="image-caption"></p> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-
-          <!--  -->
-          <div class="preview-box">
-            <div class="preview-content">
-              <!-- <a href="Pages/Fun-Fact-Pages/Planets.html"> 
-               </a> -->
-              <h3>Coming Soon</h3>
-              <!-- <p class="subtitle">
-                Learn facts about planets in our solar systems
-              </p>
-
-              <img
-                src="images/Solar System 3.jpg"
-                alt="Description of image"
-                width="300"
-                height="200"
-                class="preview-image"
-              /> -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <h6 id="top">Back to top</h6>
-      <a href="#" class="back-to-top">Back to Top</a>
-    </main>
-    <script src="load-navigation.js"></script>
-    <script src="search-index.js"></script>
-    <script src="script.js"></script>
-  </body>
 </html>

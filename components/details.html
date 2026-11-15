@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://api.nasa.gov;
+    base-uri 'self';
+    form-action 'self';" />
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>Details</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+  <main class="object-container">
+    <h1 id="obj-id">Loading...</h1>
+    <p><span class="obj-label"><strong>Catalog:</strong></span><span id="obj-catalog"></span></p>
+    <p><span class="obj-label"><strong>Type:</strong></span><span id="obj-type"></span></p>
+    <p><span class="obj-label"><strong>Constellation:</strong></span><span id="obj-constellation"></span></p>
+    <p><span class="obj-label"><strong>Right Ascension:</strong></span><span id="obj-ra"></span></p>
+    <p><span class="obj-label"><strong>Declination:</strong></span><span id="obj-dec"></span></p>
+    <div class="object-image-container">
+      <img id="obj-image" src="" alt="Object preview" />
+    </div>
+  </main>
+  <script src="../js/search-index.js"></script>
+  <script src="../js/load-navigation.js"></script>
+  <script src="../js/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const targetId = params.get("id");
+
+      if (!targetId) {
+        document.getElementById("obj-id").textContent = "No ID Provided";
+        return
+      }
+
+      // Note: The NGC-IC-M-essentials.json file contains M, NGC, IC, Sh, LDN, C
+      // Missing HCG, PGC, UGC, B
+      fetch('../data/NGC-IC-M-essentials.json')
+        .then(response => response.json())
+        .then(data => {
+          const imgElement = document.getElementById("obj-image");
+          const item = data.find(obj => obj.id === targetId);
+
+          if (item) {
+            document.title = `${item.id} - ${item.type || 'Object Details'}`;
+            document.getElementById("obj-id").textContent = item.id;
+            document.getElementById("obj-catalog").textContent = item.catalog;
+            document.getElementById("obj-type").textContent = item.type;
+            document.getElementById("obj-constellation").textContent = item.constellation;
+            document.getElementById("obj-ra").textContent = item.ra;
+            document.getElementById("obj-dec").textContent = item.dec;
+            imgElement.src = `../${item.image}`;
+            imgElement.alt = item.name || item.id;
+            imgElement.style.display = "block";
+          } else {
+            document.getElementById("obj-id").textContent = "Object Not Found";
+            imgElement.style.display = "none";
+          }
+        })
+        .catch(err => {
+          console.error("Error loading JSON file:", err);
+          document.getElementById("obj-id").textContent = "Error Loading Data";
+        });
+
+    })
+  </script>
+</body>
+
+</html>

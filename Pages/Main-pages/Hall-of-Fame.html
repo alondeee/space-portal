@@ -1,73 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="icon" href="../../Icon/.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https://api.nasa.gov;
-"
-    />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta
-      http-equiv="Permissions-Policy"
-      content="geolocation=(), microphone=(), camera=()"
-    />
-  </head>
-  <body>
-    <main>
-      <section class="hero" id="Home">
-        <div class="scroll-indicator">
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </section>
 
-      <section id="section1" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Under Construction</h3>
-            <p class="subtitle">Making astronomy accessible to everyone</p>
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall of Fame</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="../../assets/page_icons/Crown.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <section id="section1" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Astronomy</h3>
-            <p class="subtitle">Making astronomy accessible to everyone</p>
-          </div>
-        </div>
-      </section>
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://api.nasa.gov;
+    base-uri 'self';
+    form-action 'self';" />
 
-      <section id="section1" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Cosmology</h3>
-            <p class="subtitle">Making astronomy accessible to everyone</p>
-          </div>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+</head>
+
+<body>
+  <main>
+    <section class="hero" id="Home">
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+    <section id="section1" class="content-section">
+      <div class="content-row">
+        <div class="content-text">
+          <h3>Astronomy</h3>
+          <p class="subtitle">The astronomers that work tirelessly and deepen our everyday understanding of space</p>
+          <ul>
+            <li>Galileo Galilei</li>
+            <li>Nicolaus Copernicus</li>
+            <li>Johannes Kepler</li>
+            <li>William Herschel</li>
+            <li>Annie Jump Cannon</li>
+            <li>Henrietta Swan Leavitt</li>
+            <li>Ejnar Hertzsprung</li>
+            <li>Clyde Tombaugh</li>
+            <li>Vera Rubin</li>
+            <li>Carolyn Shoemaker</li>
+            <li>Giovanni Cassini</li>
+            <li>Christiaan Huygens</li>
+            <li>John Herschel</li>
+            <li>Maria Mitchell</li>
+            <li>Gerard Kuiper</li>
+            <li>Michel Mayor</li>
+            <li>Didier Queloz</li>
+            <li>Jan Oort</li>
+            <li>Subrahmanyan Chandrasekhar</li>
+            <li>Charles Messier</li>
+          </ul>
         </div>
-      </section>
-    </main>
-    <script src="../../search-index.js"></script>
-    <script src="../../script.js"></script>
-    <script src="../../load-navigation.js"></script>
-    <script>
-      console.log("Page loaded successfully!");
-    </script>
-  </body>
+      </div>
+    </section>
+
+    <section id="section1" class="content-section">
+      <div class="content-row">
+        <div class="content-text">
+          <h3>Cosmology</h3>
+          <p class="subtitle">The people who study and explore the universe's history, birth and future</p>
+          <ul>
+            <li>Albert Einstein</li>
+            <li>Georges Lemaître</li>
+            <li>Edwin Hubble</li>
+            <li>Harlow Shapley</li>
+            <li>Fritz Zwicky</li>
+            <li>Fred Hoyle</li>
+            <li>Arno Penzias</li>
+            <li>Robert Wilson</li>
+            <li>Stephen Hawking</li>
+            <li>Alan Guth</li>
+            <li>Saul Perlmutter</li>
+            <li>Adam Riess</li>
+            <li>Brian Schmidt</li>
+            <li>Willem de Sitter</li>
+            <li>John Wheeler</li>
+            <li>Yakov Zel'dovich</li>
+            <li>Andrei Linde</li>
+            <li>Neil Turok</li>
+            <li>Martin Rees</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../../js/search-index.js"></script>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/load-navigation.js"></script>
+  <script>
+    console.log("Page loaded successfully!");
+  </script>
+</body>
+
 </html>

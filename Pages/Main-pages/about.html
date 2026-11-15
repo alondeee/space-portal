@@ -1,56 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="icon" href="../../Icon/about.png" />
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://use.fontawesome.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https://api.nasa.gov;
-"
-    />
-  </head>
-  <body>
-    <main>
-      <section class="hero" id="Home">
-        <h1>About Our Mission</h1>
-        <p class="subtitle">Making astronomy accessible to everyone</p>
-        <div class="scroll-indicator">
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </section>
 
-      <section id="section1" class="content-section">
-        <div class="content-row">
-          <div class="content-text">
-            <h3>Our Mission</h3>
-            <p>
-              The Space Educational Portal was created to make astronomy and
-              space science accessible to students, educators, and curious minds
-              worldwide. We believe understanding our place in the universe is
-              fundamental to human knowledge.
-            </p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="../../assets/page_icons/Info.png" />
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://api.nasa.gov;
+    base-uri 'self';
+    form-action 'self';" />
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <main>
+    <section class="hero" id="Home">
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <section id="section1" class="content-section">
+      <div class="content-row">
+        <div class="content-text">
+          <h3>Our Mission</h3>
+          <p>
+            The Space Educational Portal was created to make astronomy and
+            space science accessible to students, educators, and curious minds
+            worldwide. We believe understanding our place in the universe is
+            fundamental to human knowledge.
+          </p>
         </div>
-      </section>
-    </main>
-    <script src="../../search-index.js"></script>
-    <script src="../../load-navigation.js"></script>
-    <script src="../../script.js"></script>
-    <script>
-      console.log("Page loaded successfully!");
-    </script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <script src="../../js/search-index.js"></script>
+  <script src="../../js/load-navigation.js"></script>
+  <script src="../../js/script.js"></script>
+  <script>
+    console.log("Page loaded successfully!");
+  </script>
+</body>
+
 </html>

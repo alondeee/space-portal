@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+
+<style>
+text{
+font-family: 'Montserrat', Arial, sans-serif;
+font-weight:600;
+letter-spacing:4px;
+}
+</style>
+
+<!-- Outer Circle -->
+<circle cx="400" cy="400" r="360" fill="none" stroke="black" stroke-width="6"></circle>
+<circle cx="400" cy="400" r="300" fill="none" stroke="black" stroke-width="3"></circle>
+
+<!-- Top Text -->
+<path id="topArc" d="M150 300 A250 250 0 0 1 650 300" fill="none"></path>
+<text font-size="40">
+<textPath href="#topArc" startOffset="50%" text-anchor="middle">
+SPACE
+</textPath>
+</text>
+
+<!-- Bottom Text -->
+<path id="bottomArc" d="M150 500 A250 250 0 0 0 650 500" fill="none"></path>
+<text font-size="30">
+<textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+EDUCATIONAL PORTAL
+</textPath>
+</text>
+
+<!-- Orbit Line -->
+<ellipse cx="400" cy="400" rx="260" ry="120" fill="none" stroke="black" stroke-width="3" transform="rotate(-20 400 400)"></ellipse>
+
+<!-- Rocket Body -->
+<path d="
+M400 260
+L430 330
+L430 430
+L370 430
+L370 330
+Z
+" fill="none" stroke="black" stroke-width="4"></path>
+
+<!-- Rocket Nose -->
+<polygon points="400,220 430,260 370,260" fill="none" stroke="black" stroke-width="4"></polygon>
+
+<!-- Rocket Window -->
+<circle cx="400" cy="310" r="12" fill="none" stroke="black" stroke-width="3"></circle>
+
+<!-- Rocket Fins -->
+<polygon points="370,410 340,440 370,440" fill="none" stroke="black" stroke-width="3"></polygon>
+
+<polygon points="430,410 460,440 430,440" fill="none" stroke="black" stroke-width="3"></polygon>
+
+<!-- Flame -->
+<path d="
+M400 430
+C390 470 390 500 400 540
+C410 500 410 470 400 430
+" fill="none" stroke="black" stroke-width="3"></path>
+
+<!-- Book -->
+<path d="M300 470 Q400 430 500 470" fill="none" stroke="black" stroke-width="4"></path>
+<path d="M300 470 Q400 510 500 470" fill="none" stroke="black" stroke-width="4"></path>
+<line x1="400" y1="440" x2="400" y2="500" stroke="black" stroke-width="3"></line>
+
+<!-- Stars -->
+<circle cx="300" cy="320" r="3"></circle>
+<circle cx="520" cy="340" r="3"></circle>
+<circle cx="470" cy="270" r="3"></circle>
+<circle cx="350" cy="300" r="2"></circle>
+<circle cx="460" cy="360" r="2"></circle>
+
+</svg>

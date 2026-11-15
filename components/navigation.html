@@ -1,0 +1,208 @@
+<header>
+  <div class="logo">
+    <a href="/index.html">
+      <img src="/assets/space-portal-logo/Space-Educational-Portal-Transparent-Background.png"
+        alt="Description of image" width="80" height="80" />
+      <div class="text-group">
+        <h1>Space Educational Portal</h1>
+        <p class="tagline">For the Future Leaders</p>
+      </div>
+    </a>
+  </div>
+
+  <button class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun" style="display: none"></i>
+  </button>
+
+  <div class="search-container">
+    <input type="search" id="site-search" placeholder="Search galaxies, nebulas..." aria-label="Search the site" />
+    <button id="search-button" class="search-btn">
+      <i class="fas fa-search"></i>
+    </button>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="menu-panel" id="menuPanel">
+  <div class="menu-header">
+    <h2>Menu</h2>
+  </div>
+  <nav class="site-nav">
+    <a href="/index.html"><i class="fas fa-home"
+        aria-hidden="true"></i>Home</a>
+    <a href="/pages/main-pages/about.html"><i
+        class="fas fa-info-circle" aria-hidden="true"></i> About</a>
+    <a href="/pages/main-pages/gallery.html"><i
+        class="fas fa-images" aria-hidden="true"></i> Gallery</a>
+    <a href="/pages/main-pages/resources.html"><i class="fas fa-book" aria-hidden="true"></i>
+      Resources</a>
+    <a href="/pages/main-pages/news.html"><i class="fas fa-newspaper" aria-hidden="true"></i>
+      News</a>
+
+      <!-- Discover -->
+    <div class="nav-item dropdown">
+      <a class="dropdown-toggle" rel="noopener noreferrer"><i class="fas fa-binoculars" aria-hidden="true"></i>
+        Discover</a>
+      <div class="dropdown-content">
+        <div class="dropdown-section">
+          <h4>Celestial Objects</h4>
+          <a href="/pages/discover-pages/Stars.html" rel="noopener noreferrer"><i class="fas fa-sun"
+              aria-hidden="true"></i>
+            Stars</a>
+          <a href="/pages/discover-pages/Exoplanets.html" rel="noopener noreferrer"><i class="fas fa-globe-americas"
+              aria-hidden="true"></i>Exoplanets</a>
+          <a href="/pages/discover-pages/Neutron-stars.html" rel="noopener noreferrer"><i class="fas fa-star-of-life"
+              aria-hidden="true"></i>Neutron Stars</a>
+          <a href="/pages/discover-pages/Blackholes.html" rel="noopener noreferrer"><i class="fas fa-circle"
+              aria-hidden="true"></i>Black
+            Holes</a>
+          <a href="/pages/discover-pages/Nebulas.html" rel="noopener noreferrer"><i class="fas fa-cloud"
+              aria-hidden="true"></i>Nebulas</a>
+          <a href="/pages/discover-pages/Galaxies.html" rel="noopener noreferrer"><i class="fas fa-grin-alt"
+              aria-hidden="true"></i>Galaxies</a>
+          <a href="/pages/discover-pages/Cluster.html" rel="noopener noreferrer"><i class="fas fa-object-group"
+              aria-hidden="true"></i>Galaxy Clusters</a>
+          <a href="/pages/discover-pages/Supercluster-Superstructures.html" rel="noopener noreferrer"><i
+              class="fas fa-sitemap" aria-hidden="true"></i>Superclusters</a>
+          <a href="/pages/discover-pages/Walls-filaments.html" rel="noopener noreferrer"><i
+              class="fas fa-project-diagram" aria-hidden="true"></i>Walls & Filaments</a>
+          <a href="/pages/discover-pages/Blazars-Quasars.html" rel="noopener noreferrer"><i class="fas fa-meteor"
+              aria-hidden="true"></i>
+            Blazars-Quasars</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explore Pages -->
+    <div class="nav-item dropdown">
+      <a class="dropdown-toggle" rel="noopener noreferrer">
+        <i class="fas fa-compass"></i> Explore
+      </a>
+      <div class="dropdown-content">
+        <div class="dropdown-section">
+          <h4>Explore</h4>
+          <a href="/pages/explore-pages/Solar-System/solar-system.html" rel="noopener noreferrer">
+            <i class="fas fa-sun" aria-hidden="true"></i>Solar System
+          </a>
+          <a href="/pages/explore-pages/Milky-way.html" rel="noopener noreferrer">
+            <i class="fas fa-star" aria-hidden="true"></i>Milky Way
+          </a>
+
+          <a href="/pages/explore-pages/Local-group.html" rel="noopener noreferrer">
+            <i class="fas fa-project-diagram" aria-hidden="true"></i>Local Group
+          </a>
+          <a href="/pages/explore-pages/Virgo.html" rel="noopener noreferrer">
+            <i class="fas fa-certificate" aria-hidden="true"></i>Virgo Galaxy Cluster
+          </a>
+          <a href="/pages/explore-pages/Laniakea.html" rel="noopener noreferrer">
+            <i class="fas fa-atom" aria-hidden="true"></i>Laniakea Supercluster
+          </a>
+          <a href="/pages/explore-pages/Observable-universe.html" rel="noopener noreferrer">
+            <i class="fas fa-eye" aria-hidden="true"></i>Observable universe
+          </a>
+          <a href="/pages/explore-pages/Real-universe.html" rel="noopener noreferrer">
+            <i class="fas fa-infinity" aria-hidden="true"></i>Real universe
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event Pages -->
+    <div class="nav-item dropdown">
+      <a class="dropdown-toggle" rel="noopener noreferrer">
+        <i class="fas fa-calendar-alt" aria-hidden="true"></i> Events</a>
+      <div class="dropdown-content">
+        <div class="dropdown-section">
+          <h4>Events</h4>
+          <a href="/pages/event-pages/solar-eclipse.html" rel="noopener noreferrer">
+            <i class="fas fa-sun" aria-hidden="true"></i> Solar Eclipse
+          </a>
+          <a href="/pages/event-pages/lunar-eclipse.html" rel="noopener noreferrer">
+            <i class="fas fa-moon" aria-hidden="true"></i> Lunar Eclipse
+          </a>
+          <a href="/pages/event-pages/planetary-alignment.html" rel="noopener noreferrer">
+            <i class="fas fa-globe-americas" aria-hidden="true"></i> Planetary Alignment
+          </a>
+          <a href="/pages/event-pages/meteor-shower.html" rel="noopener noreferrer">
+            <i class="fas fa-meteor" aria-hidden="true"></i> Meteor Shower
+          </a>
+          <a href="/pages/event-pages/ISS-lookout.html" rel="noopener noreferrer">
+            <i class="fas fa-satellite" aria-hidden="true"></i> Satellites lookout
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Space Missions -->
+    <div class="nav-item dropdown">
+      <a class="dropdown-toggle" rel="noopener noreferrer">
+        <i class="fas fa-satellite" aria-hidden="true"></i> Missions
+      </a>
+      <div class="dropdown-content">
+        <div class="dropdown-section">
+          <h4>Missions</h4>
+          <a href="/pages/missions-pages/telescopes.html" rel="noopener noreferrer"><i class="fas fa-eye"
+              aria-hidden="true"></i>
+            Telescopes
+          </a>
+          <a href="/pages/missions-pages/observatories.html" rel="noopener noreferrer"><i class="fas fa-search"
+              aria-hidden="true"></i>
+            Observatories
+          </a>
+          <a href="/pages/missions-pages/rovers.html" rel="noopener noreferrer"><i class="fas fa-robot"
+              aria-hidden="true"></i>
+            Rovers
+          </a>
+          <a href="/pages/missions-pages/satellites.html" rel="noopener noreferrer"><i class="fas fa-satellite"
+              aria-hidden="true"></i>
+            Satellites
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fun Facts -->
+    <div class="nav-item dropdown">
+      <a class="dropdown-toggle">
+        <i class="fas fa-fighter-jet" rel="noopener noreferrer"></i>
+        Fun Facts
+      </a>
+      <div class="dropdown-content">
+        <div class="dropdown-section">
+          <h4>Explore & Discover</h4>
+          <a href="/pages/fun-fact-pages/Centauri-system.html" rel="noopener noreferrer"><i class="fas fa-sun"
+              aria-hidden="true"></i>
+            Near Earth Star Systems</a>
+          <a href="/pages/fun-fact-pages/Centauri-system.html" rel="noopener noreferrer"><i class="fas fa-star"
+              aria-hidden="true"></i>
+            Centauri System
+          </a>
+          <a href="/pages/fun-fact-pages/Planets.html" rel="noopener noreferrer"><i class="fas fa-globe"
+              aria-hidden="true"></i>
+            Planets</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/pages/main-pages/Hall-of-Fame.html" rel="noopener noreferrer"><i class="fas fa-crown"></i> Hall of Fame
+    </a>
+
+    <a href="/pages/main-pages/Education-main.html" rel="noopener noreferrer"><i class="fas fa-brain"></i>
+      Education</a>
+
+    <a href="/pages/main-pages/Constellation.html" rel="noopener noreferrer"><i class="fas fa-star"></i>
+      Constellations</a>
+    <a href="/pages/main-pages/quiz.html" rel="noopener noreferrer"><i class="fas fa-brain"></i> Quiz</a>
+    <a href="/pages/main-pages/contact.html" rel="noopener noreferrer"><i class="fas fa-envelope"></i>
+      Contact</a>
+    <a href="/pages/main-pages/catalog-1.html" rel="noopener noreferrer">Visual observation catalogs</a>
+
+    <a href="/pages/main-pages/catalog-d.html" rel="noopener noreferrer">Astronomical catalogs</a>
+  </nav>
+</div>
